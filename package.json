@@ -1,0 +1,28 @@
+{
+  "name": "primordial-css",
+  "version": "0.0.1",
+  "description": "HTML element only css",
+  "main": "index.js",
+  "scripts": {
+    "horizon": "horizon",
+    "serve": "serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brochington/primordial-css.git"
+  },
+  "author": "Broch Stilley <brochington@gmail.com>",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/brochington/primordial-css/issues"
+  },
+  "homepage": "https://github.com/brochington/primordial-css#readme",
+  "dependencies": {
+    "@brochington/horizon": "0.0.4",
+    "sanitize.css": "^11.0.1",
+    "webpack": "^4.43.0"
+  },
+  "devDependencies": {
+    "serve": "^11.3.2"
+  }
+}
