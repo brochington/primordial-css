@@ -115,47 +115,64 @@ i {
 em {
 }
 
-input.type1 {
-  /* padding: 12px 14px 10px; */
+input[p-type="primary"] {
   padding: 12px 14px;
-  border-color: var(--primary);
   color: white;
-  border-radius: 6px;
-  border-width: 0px;
-  border-style: solid;
   background-color: var(--primary);
-  /* background: rgba(85, 220, 226, 0.22); */
-  font-size: 16px;
+  border-radius: 6px;
+  border-width: 0.5px;
+  border-style: solid;
+  border-color: var(--primary-dark);
+  font-size: 14px;
   width: 100%;
+  font-family: Inter;
+  outline: none;
   transition: box-shadow 240ms, transform 240ms;
 }
 
-input.type1:focus {
-  outline: none;
-  box-shadow: -5px 5px 0px 0px rgba(85, 220, 226, 0.22);
+input[p-type="primary"]:hover {
+  transform: matrix(1, 0, 0, 1, 2, -2);
+  box-shadow: -5px 5px 0px 0px #254a58;
 }
+
+input[p-type="primary"]:focus {
+  transform: matrix(1, 0, 0, 1, 2, -2);
+  box-shadow: -5px 5px 0px 0px #254a58;
+}
+
+/* input[p-type="primary"]:active {
+  transform: matrix(1, 0, 0, 1, 1, -1);
+  box-shadow: -4px 4px 0px 0px #254a58;
+} */
 
 textarea {
-  /* padding: 12px 14px 10px; */
-  padding: 12px 14px;
-  border-color: var(--primary);
-  border-radius: 7px;
-  border-width: 0;
-  background: rgba(85, 220, 226, 0.22);
-  font-size: 16px;
+padding: 12px 14px;
+  color: white;
+  background-color: var(--primary);
+  border-radius: 6px;
+  border-width: 0.5px;
+  border-style: solid;
+  border-color: var(--primary-dark);
+  font-size: 14px;
   width: 100%;
-  color: black;
   font-family: Inter;
-  transition: box-shadow 0.3s;
-}
-
-textarea:focus {
   outline: none;
-  box-shadow: -5px 5px 0px 0px var(--primary-shadow);
+  transition: box-shadow 240ms, transform 240ms;
 }
 
-input::selection {
-  background: rgb(198, 255, 255);
+textarea[p-type="primary"]:hover {
+  transform: matrix(1, 0, 0, 1, 2, -2);
+  box-shadow: -5px 5px 0px 0px #254a58;
+}
+
+textarea[p-type="primary"]:focus {
+  transform: matrix(1, 0, 0, 1, 2, -2);
+  box-shadow: -5px 5px 0px 0px #254a58;
+}
+
+textarea[p-type="primary"]:active {
+  transform: matrix(1, 0, 0, 1, 1, -1);
+  box-shadow: -4px 4px 0px 0px #254a58;
 }
 
 input.type2 {
@@ -316,16 +333,4 @@ button[p-size="lg"] {
   font-size: 16px;
   padding: 12px 32px;
   height: 44px;
-}
-
-my-thing[something="here"] {
-  color: orange;
-}
-
-my-thing[something="there"] {
-  color: purple;
-}
-
-button[cool-type="primary"] {
-  background-color: rebeccapurple;
 }
