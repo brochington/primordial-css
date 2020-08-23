@@ -4,15 +4,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="node_modules/sanitize.css/sanitize.css">
-  <!-- <link rel="stylesheet" type="text/css" href="css/horizon-styles.css"> -->
-  <link rel="stylesheet" type="text/css" href="css/first.css">
-  <link rel="stylesheet" type="text/css" href="css/playground.css">
+  <!-- <link rel="stylesheet" type="text/css" href="node_modules/sanitize.css/sanitize.css"> -->
+  <link rel="stylesheet" type="text/css" href="css/horizon-styles.css">
+  <link rel="stylesheet" type="text/css" href="css/primordial.css">
+
+  <!-- <link rel="stylesheet" type="text/css" href="css/playground.css"> -->
   <title>primordial-css</title>
 </head>
 
-<body>
-  <div style="margin: 14px;">
+<body class="m4">
+  <div>
     <h1>Never Make fun of a Dog Holding Scissors</h1>
     <h2>Heading 2</h2>
     <h3>Heading 3</h3>
@@ -20,7 +21,7 @@
     <h5>Heading 5</h5>
     <h6>Heading 6</h6>
   </div>
-  <div style="margin: 14px;">
+  <div>
     <h1>This is an Awesome article</h1>
     <div>
       Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin
@@ -38,29 +39,45 @@
       amet..", comes from a line in section 1.10.32.
     </div>
   </div>
-  <section>
-    <h3>Form 1</h3>
-    <label style="display: inline-block; margin-bottom: 7px;">Full Name</label>
-    <div style="width: 20rem; margin-bottom: 14px;">
-      <input p-type="primary" type="text" placeholder="Full Name" />
+  <section style="width: 20rem;">
+    <h2>Inputs</h2>
+    <h3>Primary inputs</h3>
+    <h4>Label Top</h4>
+    <div class="mb2">
+      <label p-location="top">Full Name</label>
+      <input p-type="primary" type="text" placeholder="The Man" />
     </div>
-    <div style="width: 20rem; margin-bottom: 14px;">
-      <textarea p-type="primary" placeholder="Content"></textarea>
+    <div class="mb2">
+      <label p-location="top">Content</label>
+      <textarea p-type="primary" placeholder="Why hello there..."></textarea>
+
     </div>
-    <label style="display: inline-block; margin-bottom: 7px;">Full Name</label>
+
+    <h4>Label Left</h4>
+    <div class="grid" style="display: grid; grid-template-columns: 7rem 20rem;">
+      <label p-location="left">Full Name</label>
+      <input class="mb2" p-type="primary" type="text" placeholder="The Man" />
+
+      <label p-location="left">Content</label>
+      <textarea p-type="primary" placeholder="Why hello there..."></textarea>
+    </div>
+
+
+    <h3>Outline inputs</h3>
+    <label p-location="top">Full Name</label>
     <div style="width: 20rem; margin-bottom: 8px;">
-      <input class="type2" type="text" value="Broch Stilley" />
+      <input p-type="outline" type="text" value="Broch Stilley" />
     </div>
     <label style="display: inline-block; margin-bottom: 7px;">Email</label>
     <div style="width: 20rem">
-      <input class="type2" type="text" value="brochington@gmail.com" />
+      <textarea p-type="outline" type="text" value="brochington@gmail.com"></textarea>
     </div>
   </section>
   <section>
     <h3>Buttons</h3>
-    <h4>Primary Buttons</h4>
+    <h4>Primary</h4>
     <div style="margin-bottom: 16px;">
-      <div style="display: grid; grid-template-columns: repeat(3, 170px); gap: 10px;">
+      <div style="display: grid; grid-template-columns: repeat(3, 170px); gap: 12px;">
         <div>
           <button p-type="primary" p-size="sm">I'm a button</button>
         </div>
@@ -70,7 +87,10 @@
         <div>
           <button p-type="primary" p-size="lg">I'm a button</button>
         </div>
-        <!-- outline buttons -->
+      </div>
+
+      <h4>Outline</h4>
+      <div style="display: grid; grid-template-columns: repeat(3, 170px); gap: 12px;">
         <div>
           <button p-type="outline" p-size="sm">I'm a button</button>
         </div>
@@ -80,14 +100,21 @@
         <div>
           <button p-type="outline" p-size="lg">I'm a button</button>
         </div>
-
       </div>
     </div>
   </section>
-  </div>
+  <section>
+    <div style="display:grid;grid-template-columns: repeat(7, 1fr);grid-template-rows: 5rem;">
+      <div style="background-color: black;"></div>
+      <div style="background-color: black;"></div>
+      <div style="background-color: black;"></div>
+      <div style="background-color: black;"></div>
+      <div style="background-color: black;"></div>
+      <div style="background-color: black;"></div>
+      <div style="background-color: black;"></div>
 
-  <div style="margin: 30px;">
-  </div>
+    </div>
+  </section>
 </body>
 
 </html>

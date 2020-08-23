@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/brochington/primordial-css#readme",
   "dependencies": {
-    "@brochington/horizon": "0.0.4",
+    "@brochington/horizon": "0.0.5",
     "sanitize.css": "^11.0.1",
     "webpack": "^4.43.0"
   },

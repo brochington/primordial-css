@@ -1,0 +1,107 @@
+/* A */
+a {
+}
+abbr {
+}
+address {
+}
+area {
+}
+article {
+}
+aside {
+}
+audio {
+}
+
+/* B */
+b {
+}
+base {
+}
+blockquote {
+}
+body {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+}
+br {
+}
+button {
+}
+
+/* C */
+canvas {
+}
+caption {
+}
+cite {
+}
+code {
+}
+col {
+}
+colgroup {
+}
+content {
+}
+
+/* D */
+data {
+}
+datalist {
+}
+dd {
+}
+
+div {
+}
+
+span {
+}
+
+/* Headings */
+
+h1 {
+  font-size: 36px;
+}
+
+h2 {
+  font-size: 24px;
+  color: var(--primary);
+}
+
+h3 {
+  font-size: 20px;
+}
+
+h4 {
+  font-size: 17px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  font-size: 12px;
+}
+
+b {
+  font-weight: bold;
+}
+
+i {
+  font-style: italic;
+}
+
+em {
+}
+
+label {
+  font-size: 16px;
+}
+
+section {
+  margin: 16px;
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="/palette-gen/css/horizon-styles.css">
+  <link rel="stylesheet" type="text/css" href="/palette-gen/css/main.css">
+  <title>Document</title>
+</head>
+<body class="m3">
+  <h1>Palette Gen!!</h1>
+  <div class="row">
+    <div class="mr2 mb4">Base Color</div>
+    <input type="color" id="base-color-picker">
+  </div>
+  <div id="color-matrix" class="mb4"></div>
+  <div class="mb3">
+    <button id="clear-selected">Clear Selected</button>
+  </div>
+  <div id="selected-colors" class="row"></div>
+
+  <!-- libs -->
+  <!-- chroma docs: https://gka.github.io/chroma.js/ -->
+  <script src="https://unpkg.com/chroma-js"></script>
+  <script type="module" src="/palette-gen/js/main.mjs"></script>
+</body>
+</html>

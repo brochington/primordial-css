@@ -85,7 +85,7 @@ const config = {
 };
 
 module.exports = {
-  path: "css",
+  path: "palette-gen/css",
   filename: "horizon-styles.css",
   docPath: "docs/styles/site",
   config,
