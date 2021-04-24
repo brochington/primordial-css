@@ -77,7 +77,10 @@
     <h3>Buttons</h3>
     <h4>Primary</h4>
     <div style="margin-bottom: 16px;">
-      <div style="display: grid; grid-template-columns: repeat(3, 170px); gap: 12px;">
+      <div style="display: grid; grid-template-columns: 100px repeat(3, 170px); gap: 12px; justify-items: center;">
+        <div>
+          <button p-type="primary" p-size="xs">I'm a button</button>
+        </div>
         <div>
           <button p-type="primary" p-size="sm">I'm a button</button>
         </div>
@@ -90,7 +93,10 @@
       </div>
 
       <h4>Outline</h4>
-      <div style="display: grid; grid-template-columns: repeat(3, 170px); gap: 12px;">
+      <div style="display: grid; grid-template-columns: 100px repeat(3, 170px); gap: 12px; justify-items: center;">
+        <div>
+          <button p-type="outline" p-size="xs">I'm a button</button>
+        </div>
         <div>
           <button p-type="outline" p-size="sm">I'm a button</button>
         </div>
@@ -104,17 +110,36 @@
     </div>
   </section>
   <section>
-    <div style="display:grid;grid-template-columns: repeat(7, 1fr);grid-template-rows: 5rem;">
-      <div style="background-color: black;"></div>
-      <div style="background-color: black;"></div>
-      <div style="background-color: black;"></div>
-      <div style="background-color: black;"></div>
-      <div style="background-color: black;"></div>
-      <div style="background-color: black;"></div>
-      <div style="background-color: black;"></div>
+    <h3>Lists</h3>
 
+    <h4>Ordered Lists</h4>
+
+    <ol>
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+    </ol>
+
+
+    <h4>Unordered Lists</h4>
+
+    <ul>
+      <li>Iterm 1</li>
+      <li>Iterm 2</li>
+      <li>Iterm 3</li>
+    </ul>
+  </section>
+  <section>
+    <div class="wrem-9">
+      <details>
+        <summary>Tacos</summary>
+        <div>I really like Tacos. And Burritos.</div>
+      </details>
     </div>
   </section>
+
+  <div class="hrem-5"></div>
+
 </body>
 
 </html>

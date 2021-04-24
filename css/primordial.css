@@ -2,21 +2,20 @@
 
 /* Variables */
 :root {
-  --white: white;
-  --primary: #407f98;
-  --primary-dark: rgb(0, 59, 59);
-  --primary-shadow: #407f98;
+  --levatation-matrix: matrix(1, 0, 0, 1, 4, -4);
+  --levatation-box-shadow: -4px 4px 0px 0px;
 }
 
 body {
   font-family: "Inter", sans-serif;
   font-size: 14px;
+  color: var(--magic-night); 
 }
 
 /* label */
 
 label {
-  color: var(--primary-dark);
+  color: var(--midnight-jam);
 }
 
 label[p-location="top"] {
@@ -39,49 +38,49 @@ input {
 
 input[p-type="primary"] {
   padding: 8px;
-  color: white;
-  background-color: var(--primary);
+  color: var(--midnight-jam);
+  background-color: var(--white);
   border-radius: 6px;
   border-width: 0.5px;
   border-style: solid;
-  border-color: var(--primary-dark);
+  border-color: var(--space-convoy);
   width: 100%;
   outline: none;
   transition: box-shadow 240ms, transform 240ms;
 }
 
 input[p-type="primary"]:hover {
-  transform: matrix(1, 0, 0, 1, 2, -2);
-  box-shadow: -5px 5px 0px 0px #254a58;
+  transform: var(--levatation-matrix);
+  box-shadow: var(--levatation-box-shadow) var(--stone-blue);
 }
 
 input[p-type="primary"]:focus {
-  transform: matrix(1, 0, 0, 1, 2, -2);
-  box-shadow: -5px 5px 0px 0px #254a58;
+  transform: var(--levatation-matrix);
+  box-shadow: var(--levatation-box-shadow) var(--extreme);
 }
 
 input[p-type="outline"] {
   padding: 8px;
-  border-color: var(--primary);
-  color: var(--primary-dark);
+  border-color: var(--space-convoy);
+  color: var(--midnight-jam);
   border-radius: 6px;
   border-width: 0.5px;
   border-style: solid;
-  background: white;
+  background: var(--white);
   width: 100%;
   transition: box-shadow 240ms, transform 240ms;
 }
 
 input[p-type="outline"]:hover {
   outline: none;
-  box-shadow: -4px 4px 0px 0px var(--primary-shadow);
-  transform: matrix(1, 0, 0, 1, 2, -2);
+  transform: var(--levatation-matrix);
+  box-shadow: var(--levatation-box-shadow) var(--stone-blue);
 }
 
 input[p-type="outline"]:focus {
   outline: none;
-  box-shadow: -4px 4px 0px 0px var(--primary-shadow);
-  transform: matrix(1, 0, 0, 1, 2, -2);
+  transform: var(--levatation-matrix);
+  box-shadow: var(--levatation-box-shadow) var(--extreme);
 }
 
 
@@ -105,13 +104,13 @@ textarea[p-type="primary"] {
 }
 
 textarea[p-type="primary"]:hover {
-  transform: matrix(1, 0, 0, 1, 2, -2);
-  box-shadow: -5px 5px 0px 0px #254a58;
+  transform: var(--levatation-matrix);
+  box-shadow: var(--levatation-box-shadow) #254a58;
 }
 
 textarea[p-type="primary"]:focus {
-  transform: matrix(1, 0, 0, 1, 2, -2);
-  box-shadow: -5px 5px 0px 0px #254a58;
+  transform: var(--levatation-matrix);
+  box-shadow: var(--levatation-box-shadow) #254a58;
 }
 
 textarea[p-type="outline"] {
@@ -126,20 +125,14 @@ textarea[p-type="outline"] {
 }
 
 textarea[p-type="outline"]:hover {
-  box-shadow: -4px 4px 0px 0px var(--primary-shadow);
-  transform: matrix(1, 0, 0, 1, 2, -2);
+  transform: var(--levatation-matrix);
+  box-shadow: var(--levatation-box-shadow) var(--primary-shadow);
 }
 
 textarea[p-type="outline"]:focus {
-  box-shadow: -4px 4px 0px 0px var(--primary-shadow);
-  transform: matrix(1, 0, 0, 1, 2, -2);
+  transform: var(--levatation-matrix);
+  box-shadow: var(--levatation-box-shadow) var(--primary-shadow);
 }
-
-
-
-
-
-/* lists */
 
 /* buttons */
 button {
@@ -156,22 +149,22 @@ button {
 }
 
 button[p-type="primary"]:hover {
-  transform: matrix(1, 0, 0, 1, 2, -2);
-  box-shadow: -5px 5px 0px 0px #254a58;
+  transform: var(--levatation-matrix);
+  box-shadow: var(--levatation-box-shadow) var(--greenland-blue);
 }
 
 button[p-type="primary"]:focus {
-  transform: matrix(1, 0, 0, 1, 2, -2);
-  box-shadow: -5px 5px 0px 0px #254a58;
+  transform: var(--levatation-matrix);
+  box-shadow: var(--levatation-box-shadow) var(--greenland-blue);
 }
 
 button[p-type="primary"]:active {
-  transform: matrix(1, 0, 0, 1, 1, -1);
-  box-shadow: -4px 4px 0px 0px #254a58;
+  transform: matrix(1, 0, 0, 1, 3, -3);
+  box-shadow: -3px 3px 0px 0px var(--greenland-blue);
 }
 
 button[p-type="primary"] {
-  background-color: var(--primary);
+  background-color: var(--atlantic-deep);
   color: var(--white);
   border-style: solid;
   border-width: 1px;
@@ -179,7 +172,7 @@ button[p-type="primary"] {
 }
 
 button[p-type="outline"] {
-  border-color: var(--primary);
+  border-color: var(--blue-angora);
   color: var(--primary-dark);
   border-radius: 6px;
   border-width: 0.5px;
@@ -188,18 +181,24 @@ button[p-type="outline"] {
 }
 
 button[p-type="outline"]:hover {
-  transform: matrix(1, 0, 0, 1, 2, -2);
-  box-shadow: -4px 4px 0px 0px var(--primary-shadow);
+  transform: var(--levatation-matrix);
+  box-shadow: var(--levatation-box-shadow) var(--space-convoy);
 }
 
 button[p-type="outline"]:focus {
-  transform: matrix(1, 0, 0, 1, 2, -2);
-  box-shadow: -4px 4px 0px 0px var(--primary-shadow);  
+  transform: var(--levatation-matrix);
+  box-shadow: var(--levatation-box-shadow) var(--atlantic-deep);  
 }
 
 button[p-type="outline"]:active {
-  transform: matrix(1, 0, 0, 1, 1, -1);
-  box-shadow: -3px 3px 0px 0px var(--primary-shadow);
+  transform: matrix(1, 0, 0, 1, 3, -3);
+  box-shadow: -3px 3px 0px 0px var(--atlantic-deep);
+}
+
+button[p-size="xs"] {
+  font-size: 12px;
+  padding: 0 16px;
+  height: 24px;
 }
 
 button[p-size="sm"] {
@@ -215,7 +214,42 @@ button[p-size="md"] {
 }
 
 button[p-size="lg"] {
-  font-size: 16px;
-  padding: 12px 32px;
+  font-size: 17px;
+  padding: 12px 30px;
   height: 44px;
+}
+
+/* lists */
+
+ul {
+  
+}
+
+li {
+
+}
+
+ol {
+
+}
+
+
+blockquote {
+
+}
+
+/* details */
+
+details {
+
+}
+
+summary {
+
+}
+
+/* datalist */
+
+datalist {
+  
 }
