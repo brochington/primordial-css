@@ -7,8 +7,9 @@ function setColorScheme(scheme) {
 }
 
 function main() {
-  // init
-  const savedColorScheme = window.localStorage.getItem('color-scheme') ?? 'light';
+  // init color scheme
+  const defaultScheme = window.matchMedia('(prefers-color-scheme: dark)') ? 'dark' : 'light';
+  const savedColorScheme = window.localStorage.getItem('color-scheme') ?? defaultScheme;
   colorSchemeForm.querySelector(`[value="${savedColorScheme}"`).setAttribute('checked', true);
   setColorScheme(savedColorScheme);
 
