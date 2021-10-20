@@ -1,0 +1,126 @@
+/* https://github.com/argyleink/gui-challenges/blob/main/color-schemes/style.css */
+
+:root {
+  /* typography */
+  --p-font-family-1: initial;
+  --p-font-family-2: initial;
+  --p-font-family-3: initial;
+  --p-font-family-4: initial;
+  
+  /* brand foundation */
+  --p-brand-hue: 200;
+  --p-brand-saturation: 100%;
+  --p-brand-lightness: 50%;
+
+  /* light */
+  --p-brand-light: hsl(
+    var(--p-p-brand-hue) var(--p-p-brand-saturation) var(--p-p-brand-lightness)
+  );
+  --p-text-1-light: hsl(var(--p-brand-hue) var(--p-p-brand-saturation) 10%);
+  --p-text-2-light: hsl(var(--p-brand-hue) 30% 30%);
+  --p-surface-1-light: hsl(var(--p-brand-hue) 25% 90%);
+  --p-surface-2-light: hsl(var(--p-brand-hue) 20% 99%);
+  --p-surface-3-light: hsl(var(--p-brand-hue) 20% 92%);
+  --p-surface-4-light: hsl(var(--p-brand-hue) 20% 85%);
+  --p-surface-shadow-light: var(--p-brand-hue) 10% 20%;
+  --p-shadow-strength-light: 0.02;
+
+  /* dark */
+  --p-brand-dark: hsl(
+    var(--p-brand-hue) calc(var(--p-brand-saturation) / 2)
+      calc(var(--p-brand-lightness) / 1.5)
+  );
+  --p-text-1-dark: hsl(var(--p-brand-hue) 15% 85%);
+  --p-text-2-dark: hsl(var(--p-brand-hue) 5% 65%);
+  --p-surface-1-dark: hsl(var(--p-brand-hue) 10% 10%);
+  --p-surface-2-dark: hsl(var(--p-brand-hue) 10% 15%);
+  --p-surface-3-dark: hsl(var(--p-brand-hue) 5% 20%);
+  --p-surface-4-dark: hsl(var(--p-brand-hue) 5% 25%);
+  --p-surface-shadow-dark: var(--p-brand-hue) 50% 3%;
+  --p-shadow-strength-dark: 0.8;
+
+  /* dim */
+  --p-brand-dim: hsl(
+    var(--p-brand-hue) calc(var(--p-brand-saturation) / 1.25)
+      calc(var(--p-brand-lightness) / 1.25)
+  );
+  --p-text-1-dim: hsl(var(--p-brand-hue) 15% 75%);
+  --p-text-2-dim: hsl(var(--p-brand-hue) 10% 61%);
+  --p-surface-1-dim: hsl(var(--p-brand-hue) 10% 20%);
+  --p-surface-2-dim: hsl(var(--p-brand-hue) 10% 25%);
+  --p-surface-3-dim: hsl(var(--p-brand-hue) 5% 30%);
+  --p-surface-4-dim: hsl(var(--p-brand-hue) 5% 35%);
+  --p-surface-shadow-dim: var(--p-brand-hue) 30% 13%;
+  --p-shadow-strength-dim: 0.2;
+
+  color-scheme: light;
+
+  /* set defaults */
+  --p-brand: var(--p-brand-light);
+  --p-text-1: var(--p-text-1-light);
+  --p-text-2: var(--p-text-2-light);
+  --p-surface-1: var(--p-surface-1-light);
+  --p-surface-2: var(--p-surface-2-light);
+  --p-surface-3: var(--p-surface-3-light);
+  --p-surface-4: var(--p-surface-4-light);
+  --p-surface-shadow: var(--p-surface-shadow-light);
+  --p-shadow-strength: var(--p-shadow-strength-light);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+
+    --p-brand: var(--p-brand-dark);
+    --p-text-1: var(--p-text-1-dark);
+    --p-text-2: var(--p-text-2-dark);
+    --p-surface-1: var(--p-surface-1-dark);
+    --p-surface-2: var(--p-surface-2-dark);
+    --p-surface-3: var(--p-surface-3-dark);
+    --p-surface-4: var(--p-surface-4-dark);
+    --p-surface-shadow: var(--p-surface-shadow-dark);
+    --p-shadow-strength: var(--p-shadow-strength-dark);
+  }
+}
+
+[color-scheme='light'] {
+  color-scheme: light;
+
+  --p-brand: var(--p-brand-light);
+  --p-text-1: var(--p-text-1-light);
+  --p-text-2: var(--p-text-2-light);
+  --p-surface-1: var(--p-surface-1-light);
+  --p-surface-2: var(--p-surface-2-light);
+  --p-surface-3: var(--p-surface-3-light);
+  --p-surface-4: var(--p-surface-4-light);
+  --p-surface-shadow: var(--p-surface-shadow-light);
+  --p-shadow-strength: var(--p-shadow-strength-light);
+}
+
+[color-scheme='dark'] {
+  color-scheme: dark;
+
+  --p-brand: var(--p-brand-dark);
+  --p-text-1: var(--p-text-1-dark);
+  --p-text-2: var(--p-text-2-dark);
+  --p-surface-1: var(--p-surface-1-dark);
+  --p-surface-2: var(--p-surface-2-dark);
+  --p-surface-3: var(--p-surface-3-dark);
+  --p-surface-4: var(--p-surface-4-dark);
+  --p-surface-shadow: var(--p-surface-shadow-dark);
+  --p-shadow-strength: var(--p-shadow-strength-dark);
+}
+
+[color-scheme='dim'] {
+  color-scheme: dark;
+
+  --p-brand: var(--p-brand-dim);
+  --p-text-1: var(--p-text-1-dim);
+  --p-text-2: var(--p-text-2-dim);
+  --p-surface-1: var(--p-surface-1-dim);
+  --p-surface-2: var(--p-surface-2-dim);
+  --p-surface-3: var(--p-surface-3-dim);
+  --p-surface-4: var(--p-surface-4-dim);
+  --p-surface-shadow: var(--p-surface-shadow-dim);
+  --p-shadow-strength: var(--p-shadow-strength-dim);
+}

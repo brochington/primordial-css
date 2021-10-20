@@ -1,0 +1,91 @@
+:root {
+  /* h1 */
+  --p-h1-font-size: 64px;
+  --p-h1-font-family: var(--p-font-family-1);
+  --p-h1-color: var(--p-text-1);
+  --p-h1-font-weight: bold;
+  --p-h1-letter-spacing: -0.04rem;
+
+  /* h2 */
+  --p-h2-font-size: 56px;
+  --p-h2-font-family: var(--p-font-family-1);
+  --p-h2-color: var(--p-text-1);
+  --p-h2-font-weight: bold;
+  --p-h2-letter-spacing: -0.04rem;
+
+  /* h3 */
+  --p-h3-font-size: 40px;
+  --p-h3-font-family: var(--p-font-family-1);
+  --p-h3-color: var(--p-text-1);
+  --p-h3-font-weight: bold;
+  --p-h3-letter-spacing: -0.02rem;
+
+  /* h4 */
+  --p-h4-font-size: 32px;
+  --p-h4-font-family: var(--p-font-family-1);
+  --p-h4-color: var(--p-text-1);
+  --p-h4-font-weight: bold;
+  --p-h4-letter-spacing: -0.02rem;
+
+  /* h5 */
+  --p-h5-font-size: 24px;
+  --p-h5-font-family: var(--p-font-family-1);
+  --p-h5-color: var(--p-text-1);
+  --p-h5-font-weight: bold;
+  --p-h5-letter-spacing: -0.02rem;
+
+  /* h6 */
+  --p-h6-font-size: 14px;
+  --p-h6-font-family: var(--p-font-family-1);
+  --p-h6-color: var(--p-text-1);
+  --p-h6-font-weight: bold;
+  --p-h5-letter-spacing: 0;
+}
+
+h1 {
+  font-size: var(--p-h1-font-size);
+  font-family: var(--p-h1-font-family);
+  color: var(--p-h1-color);
+  font-weight: var(--p-h1-font-weight);
+  letter-spacing: var(--p-h1-letter-spacing);
+}
+
+h2 {
+  font-size: var(--p-h2-font-size);
+  font-family: var(--p-h2-font-family);
+  color: var(--p-h2-color);
+  font-weight: var(--p-h2-font-weight);
+  letter-spacing: var(--p-h2-letter-spacing);
+}
+
+h3 {
+  font-size: var(--p-h3-font-size);
+  font-family: var(--p-h3-font-family);
+  color: var(--p-h3-color);
+  font-weight: var(--p-h3-font-weight);
+  letter-spacing: var(--p-h3-letter-spacing);
+}
+
+h4 {
+  font-size: var(--p-h4-font-size);
+  font-family: var(--p-h4-font-family);
+  color: var(--p-h4-color);
+  font-weight: var(--p-h4-font-weight);
+  letter-spacing: var(--p-h4-letter-spacing);
+}
+
+h5 {
+  font-size: var(--p-h5-font-size);
+  font-family: var(--p-h5-font-family);
+  color: var(--p-h5-color);
+  font-weight: var(--p-h5-font-weight);
+  letter-spacing: var(--p-h5-letter-spacing);
+}
+
+h6 {
+  font-size: var(--p-h6-font-size);
+  font-family: var(--p-h6-font-family);
+  color: var(--p-h6-color);
+  font-weight: var(--p-h6-font-weight);
+  letter-spacing: var(--p-h6-letter-spacing);
+}

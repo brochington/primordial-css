@@ -2,10 +2,12 @@
   "name": "primordial-css",
   "version": "0.0.1",
   "description": "HTML element only css",
-  "main": "index.js",
+  "main": "dist/primordial.css",
   "scripts": {
     "horizon": "horizon",
-    "serve": "serve"
+    "serve": "serve",
+    "build": "webpack --config ./config/webpack.config.build.js",
+    "dev": "browser-sync start --server --files \"src/css/*.css\" \"src/playground/*.html\" --startPath \"src/playground\""
   },
   "repository": {
     "type": "git",
@@ -18,11 +20,15 @@
   },
   "homepage": "https://github.com/brochington/primordial-css#readme",
   "dependencies": {
-    "@brochington/horizon": "0.1.2",
-    "sanitize.css": "^12.0.1",
-    "webpack": "^4.46.0"
+    "@brochington/horizon": "0.1.20",
+    "sanitize.css": "^13.0.0"
   },
   "devDependencies": {
-    "serve": "^11.3.2"
+    "webpack": "^5.59.0",
+    "webpack-cli": "^4.9.1",
+    "browser-sync": "^2.27.5",
+    "mini-css-extract-plugin": "^1.6.2",
+    "serve": "^12.0.1",
+    "webpack-remove-empty-scripts": "^0.7.1"
   }
 }

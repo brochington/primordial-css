@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="../css/primordial.css" />
+    <link rel="stylesheet" type="text/css" href="./playground.css" />
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+      :root {
+        --p-font-family-1: 'Inter', sans-serif;
+      }
+
+      #color-scheme-group {
+        display: grid;
+        grid-template-columns: 3rem 1fr;
+        grid-template-rows: auto;
+      }
+    </style>
+    <title>primordial-css</title>
+  </head>
+
+  <body class="m4">
+    <div>
+      <form id="color-scheme-form">
+        <fieldset id="color-scheme-group">
+          <label>
+            light
+            <input type="radio" value="light" name="color-scheme-group">
+          </label>
+          <label>
+            dark
+            <input type="radio" value="dark" name="color-scheme-group">
+          </label>
+          <label>
+            dim
+            <input type="radio" value="dim" name="color-scheme-group">
+          </label>
+        </fieldset>
+      </form>
+    </div>
+    <div>
+      <h1>H1 - Never Make fun of a Dog Holding Scissors</h1>
+      <h2>H2 - Never Make fun of a Dog Holding Scissors</h2>
+      <h3>H3 - Never Make fun of a Dog Holding Scissors</h3>
+      <h4>H4 - Never Make fun of a Dog Holding Scissors</h4>
+      <h5>H5 - Never Make fun of a Dog Holding Scissors</h5>
+      <h6>H6 - Never Make fun of a Dog Holding Scissors</h6>
+    </div>
+    <div>
+      <h1>This is an Awesome article</h1>
+      <div>
+        Contrary to popular belief, Lorem Ipsum is not simply random text. It
+        has roots in a piece of classical Latin literature from 45 BC, making it
+        over 2000 years old. Richard McClintock, a Latin professor at
+        Hampden-Sydney College in Virginia, looked up one of the more obscure
+        Latin words, consectetur, from a Lorem Ipsum passage, and going through
+        the cites of the word in classical literature, discovered the
+        undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33
+        of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by
+        Cicero, written in 45 BC. This book is a treatise on the theory of
+        ethics, very popular during the Renaissance. The first line of Lorem
+        Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section
+        1.10.32.
+      </div>
+    </div>
+    <section style="width: 20rem">
+      <h2>Inputs</h2>
+      <h3>Primary inputs</h3>
+      <h4>Label Top</h4>
+      <div class="mb2">
+        <label p-location="top">Full Name</label>
+        <input p-type="primary" type="text" placeholder="The Man" />
+      </div>
+      <div class="mb2">
+        <label p-location="top">Content</label>
+        <textarea p-type="primary" placeholder="Why hello there..."></textarea>
+      </div>
+
+      <h4>Label Left</h4>
+      <div
+        class="grid"
+        style="display: grid; grid-template-columns: 7rem 20rem"
+      >
+        <label p-location="left">Full Name</label>
+        <input class="mb2" p-type="primary" type="text" placeholder="The Man" />
+
+        <label p-location="left">Content</label>
+        <textarea p-type="primary" placeholder="Why hello there..."></textarea>
+      </div>
+
+      <h3>Outline inputs</h3>
+      <label p-location="top">Full Name</label>
+      <div style="width: 20rem; margin-bottom: 8px">
+        <input p-type="outline" type="text" value="Broch Stilley" />
+      </div>
+      <label style="display: inline-block; margin-bottom: 7px">Email</label>
+      <div style="width: 20rem">
+        <textarea
+          p-type="outline"
+          type="text"
+          value="brochington@gmail.com"
+        ></textarea>
+      </div>
+    </section>
+    <section>
+      <h3>Buttons</h3>
+      <h4>Primary</h4>
+      <div style="margin-bottom: 16px">
+        <div
+          style="
+            display: grid;
+            grid-template-columns: 100px repeat(3, 170px);
+            gap: 12px;
+            justify-items: center;
+          "
+        >
+          <div>
+            <button p-type="primary" p-size="xs">I'm a button</button>
+          </div>
+          <div>
+            <button p-type="primary" p-size="sm">I'm a button</button>
+          </div>
+          <div>
+            <button p-type="primary" p-size="md">I'm a button</button>
+          </div>
+          <div>
+            <button p-type="primary" p-size="lg">I'm a button</button>
+          </div>
+        </div>
+
+        <h4>Outline</h4>
+        <div
+          style="
+            display: grid;
+            grid-template-columns: 100px repeat(3, 170px);
+            gap: 12px;
+            justify-items: center;
+          "
+        >
+          <div>
+            <button p-type="outline" p-size="xs">I'm a button</button>
+          </div>
+          <div>
+            <button p-type="outline" p-size="sm">I'm a button</button>
+          </div>
+          <div>
+            <button p-type="outline" p-size="md">I'm a button</button>
+          </div>
+          <div>
+            <button p-type="outline" p-size="lg">I'm a button</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <h3>Lists</h3>
+
+      <h4>Ordered Lists</h4>
+
+      <ol>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+      </ol>
+
+      <h4>Unordered Lists</h4>
+
+      <ul>
+        <li>Iterm 1</li>
+        <li>Iterm 2</li>
+        <li>Iterm 3</li>
+      </ul>
+    </section>
+    <section>
+      <div class="wrem-9">
+        <details>
+          <summary>Tacos</summary>
+          <div>I really like Tacos. And Burritos.</div>
+        </details>
+      </div>
+    </section>
+
+    <div class="hrem-5"></div>
+    <script src="js/main.js"></script>
+  </body>
+</html>

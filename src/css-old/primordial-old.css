@@ -4,6 +4,18 @@
 :root {
   --levatation-matrix: matrix(1, 0, 0, 1, 4, -4);
   --levatation-box-shadow: -4px 4px 0px 0px;
+
+  /* primary */
+  --color-primary: var(--white);
+  --bgd-color-primary: var(--magic-night);
+  --border-color-primary: var(--space-convoy);
+  --shadow-color-primary: var(--extreme);
+
+  /* outline */
+  --color-outline: var(--midnight-jam);
+  --bgd-color-outline: var(--white);
+  --border-color-outline: var(--space-convoy);
+  --shadow-color-outline: var(--stone-blue);
 }
 
 body {
@@ -38,35 +50,41 @@ input {
 
 input[p-type="primary"] {
   padding: 8px;
-  color: var(--midnight-jam);
-  background-color: var(--white);
+  color: var(--color-primary);
+  background-color: var(--bgd-color-primary);
   border-radius: 6px;
   border-width: 0.5px;
   border-style: solid;
-  border-color: var(--space-convoy);
+  border-color: var(--border-color-primary);
   width: 100%;
   outline: none;
   transition: box-shadow 240ms, transform 240ms;
 }
 
 input[p-type="primary"]:hover {
-  transform: var(--levatation-matrix);
-  box-shadow: var(--levatation-box-shadow) var(--stone-blue);
+  /* transform: var(--levatation-matrix); */
+  /* box-shadow: var(--levatation-box-shadow) var(--shadow-color-primary); */
+  /* box-shadow: var(--levatation-box-shadow) var(--shadow-color-primary); */
+  /* outline: solid orange 4px; */
 }
 
 input[p-type="primary"]:focus {
   transform: var(--levatation-matrix);
-  box-shadow: var(--levatation-box-shadow) var(--extreme);
+  box-shadow: var(--levatation-box-shadow) var(--shadow-color-primary);
 }
 
+/* --color-outline: var(--midnight-jam);
+--bgd-color-outline: var(--white);
+--border-color-outline: var(--space-convoy);
+--shadow-color-outline: var(--stone-blue); */
 input[p-type="outline"] {
   padding: 8px;
-  border-color: var(--space-convoy);
-  color: var(--midnight-jam);
+  border-color: var(--border-color-outline);
+  color: var(--color-outline);
   border-radius: 6px;
   border-width: 0.5px;
   border-style: solid;
-  background: var(--white);
+  background: var(--bgd-color-outline);
   width: 100%;
   transition: box-shadow 240ms, transform 240ms;
 }
@@ -74,13 +92,13 @@ input[p-type="outline"] {
 input[p-type="outline"]:hover {
   outline: none;
   transform: var(--levatation-matrix);
-  box-shadow: var(--levatation-box-shadow) var(--stone-blue);
+  box-shadow: var(--levatation-box-shadow) var(--shadow-color-outline);
 }
 
 input[p-type="outline"]:focus {
   outline: none;
   transform: var(--levatation-matrix);
-  box-shadow: var(--levatation-box-shadow) var(--extreme);
+  box-shadow: var(--levatation-box-shadow) var(--shadow-color-outline);
 }
 
 
@@ -94,44 +112,44 @@ textarea {
 
 textarea[p-type="primary"] {
   padding: 8px;
-  color: white;
-  background-color: var(--primary);
+  color: var(--color-primary);
+  background-color: var(--bgd-color-primary);
   border-radius: 6px;
   border-width: 0.5px;
   border-style: solid;
-  border-color: var(--primary-dark);
+  border-color: var(--border-color-primary);
   transition: box-shadow 240ms, transform 240ms;
 }
 
 textarea[p-type="primary"]:hover {
   transform: var(--levatation-matrix);
-  box-shadow: var(--levatation-box-shadow) #254a58;
+  box-shadow: var(--levatation-box-shadow) var(--bgd-color-primary);
 }
 
 textarea[p-type="primary"]:focus {
   transform: var(--levatation-matrix);
-  box-shadow: var(--levatation-box-shadow) #254a58;
+  box-shadow: var(--levatation-box-shadow) var(--bgd-color-primary);
 }
 
 textarea[p-type="outline"] {
   padding: 8px;
-  border-color: var(--primary);
-  color: var(--primary-dark);
+  border-color: var(--border-color-outline);
+  color: var(--color-outline);
   border-radius: 6px;
   border-width: 0.5px;
   border-style: solid;
-  background: white;
+  background: var(--bgd-color-outline);
   transition: box-shadow 240ms, transform 240ms;
 }
 
 textarea[p-type="outline"]:hover {
   transform: var(--levatation-matrix);
-  box-shadow: var(--levatation-box-shadow) var(--primary-shadow);
+  box-shadow: var(--levatation-box-shadow) var(--shadow-color-outline);
 }
 
 textarea[p-type="outline"]:focus {
   transform: var(--levatation-matrix);
-  box-shadow: var(--levatation-box-shadow) var(--primary-shadow);
+  box-shadow: var(--levatation-box-shadow) var(--shadow-color-outline);
 }
 
 /* buttons */
