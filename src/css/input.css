@@ -1,5 +1,7 @@
 /* Input */
 
+/* use 'accent-color': https://web.dev/accent-color/ */
+
 input {
   font: 400 14px Inter;
 }

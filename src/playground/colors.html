@@ -23,6 +23,56 @@
         font-family: var(--p-font-family-1);
       }
 
+      .jewel-1 { background-color: var(--p-jewel-1); }
+      .jewel-2 { background-color: var(--p-jewel-2); }
+      .jewel-3 { background-color: var(--p-jewel-3); }
+      .jewel-4 { background-color: var(--p-jewel-4); }
+      .jewel-5 { background-color: var(--p-jewel-5); }
+      .jewel-6 { background-color: var(--p-jewel-6); }
+      .jewel-7 { background-color: var(--p-jewel-7); }
+      .jewel-8 { background-color: var(--p-jewel-8); }
+      .jewel-9 { background-color: var(--p-jewel-9); }
+
+      .pastel-1 { background-color: var(--p-pastel-1); }
+      .pastel-2 { background-color: var(--p-pastel-2); }
+      .pastel-3 { background-color: var(--p-pastel-3); }
+      .pastel-4 { background-color: var(--p-pastel-4); }
+      .pastel-5 { background-color: var(--p-pastel-5); }
+      .pastel-6 { background-color: var(--p-pastel-6); }
+      .pastel-7 { background-color: var(--p-pastel-7); }
+      .pastel-8 { background-color: var(--p-pastel-8); }
+      .pastel-9 { background-color: var(--p-pastel-9); }
+
+      .earth-1 { background-color: var(--p-earth-1); }
+      .earth-2 { background-color: var(--p-earth-2); }
+      .earth-3 { background-color: var(--p-earth-3); }
+      .earth-4 { background-color: var(--p-earth-4); }
+      .earth-5 { background-color: var(--p-earth-5); }
+      .earth-6 { background-color: var(--p-earth-6); }
+      .earth-7 { background-color: var(--p-earth-7); }
+      .earth-8 { background-color: var(--p-earth-8); }
+      .earth-9 { background-color: var(--p-earth-9); }
+
+      .neutral-1 { background-color: var(--p-neutral-1); }
+      .neutral-2 { background-color: var(--p-neutral-2); }
+      .neutral-3 { background-color: var(--p-neutral-3); }
+      .neutral-4 { background-color: var(--p-neutral-4); }
+      .neutral-5 { background-color: var(--p-neutral-5); }
+      .neutral-6 { background-color: var(--p-neutral-6); }
+      .neutral-7 { background-color: var(--p-neutral-7); }
+      .neutral-8 { background-color: var(--p-neutral-8); }
+      .neutral-9 { background-color: var(--p-neutral-9); }
+
+      .neon-1 { background-color: var(--p-neon-1); }
+      .neon-2 { background-color: var(--p-neon-2); }
+      .neon-3 { background-color: var(--p-neon-3); }
+      .neon-4 { background-color: var(--p-neon-4); }
+      .neon-5 { background-color: var(--p-neon-5); }
+      .neon-6 { background-color: var(--p-neon-6); }
+      .neon-7 { background-color: var(--p-neon-7); }
+      .neon-8 { background-color: var(--p-neon-8); }
+      .neon-9 { background-color: var(--p-neon-9); }
+
       .brand-1 {
         background-color: var(--p-brand);
       }
@@ -83,23 +133,24 @@
       </li>
     </ul>
     <form id="color-scheme-form" class="row items-center">
-      <fieldset id="color-scheme-group">
-        <label for="light">light</label>
+      <fieldset id="color-scheme-group" class="row items-center">
+        <label for="light" class="">light</label>
         <input
           id="light"
           type="radio"
           value="light"
           name="color-scheme-group"
+          class="mr2"
         />
         <label for="dark">dark</label>
-        <input id="dark" type="radio" value="dark" name="color-scheme-group" />
+        <input id="dark" type="radio" value="dark" name="color-scheme-group" class="mr2" />
         <label for="dim">dim</label>
-        <input id="dim" type="radio" value="dim" name="color-scheme-group" />
+        <input id="dim" type="radio" value="dim" name="color-scheme-group" class="mr2" />
       </fieldset>
     </form>
     <div class="m4">
       <h1>Colors</h1>
-      <div class="color-grid">
+      <div class="color-grid mb4">
         <div class="brand-1 color-tile rad-shadow">brand</div>
         <div class="accent-1 color-tile rad-shadow">accent</div>
         <div class="text-1 color-tile rad-shadow">text-1</div>
@@ -109,6 +160,71 @@
         <div class="surface-2 color-tile rad-shadow">surface-2</div>
         <div class="surface-3 color-tile rad-shadow">surface-3</div>
         <div class="surface-4 color-tile rad-shadow">surface-4</div>
+      </div>
+
+      <h4>Jewel Tones</h4>
+      <div class="color-grid">
+        <div class="jewel-1 color-tile rad-shadow">jewel-1</div>
+        <div class="jewel-2 color-tile rad-shadow">jewel-2</div>
+        <div class="jewel-3 color-tile rad-shadow">jewel-3</div>
+        <div class="jewel-4 color-tile rad-shadow">jewel-4</div>
+        <div class="jewel-5 color-tile rad-shadow">jewel-5</div>
+        <div class="jewel-6 color-tile rad-shadow">jewel-6</div>
+        <div class="jewel-7 color-tile rad-shadow">jewel-7</div>
+        <div class="jewel-8 color-tile rad-shadow">jewel-8</div>
+        <div class="jewel-9 color-tile rad-shadow">jewel-9</div>
+      </div>
+
+      <h4>Pastel Tones</h4>
+      <div class="color-grid">
+        <div class="pastel-1 color-tile rad-shadow">pastel-1</div>
+        <div class="pastel-2 color-tile rad-shadow">pastel-2</div>
+        <div class="pastel-3 color-tile rad-shadow">pastel-3</div>
+        <div class="pastel-4 color-tile rad-shadow">pastel-4</div>
+        <div class="pastel-5 color-tile rad-shadow">pastel-5</div>
+        <div class="pastel-6 color-tile rad-shadow">pastel-6</div>
+        <div class="pastel-7 color-tile rad-shadow">pastel-7</div>
+        <div class="pastel-8 color-tile rad-shadow">pastel-8</div>
+        <div class="pastel-9 color-tile rad-shadow">pastel-9</div>
+      </div>
+
+      <h4>Earth Tones</h4>
+      <div class="color-grid">
+        <div class="earth-1 color-tile rad-shadow">earth-1</div>
+        <div class="earth-2 color-tile rad-shadow">earth-2</div>
+        <div class="earth-3 color-tile rad-shadow">earth-3</div>
+        <div class="earth-4 color-tile rad-shadow">earth-4</div>
+        <div class="earth-5 color-tile rad-shadow">earth-5</div>
+        <div class="earth-6 color-tile rad-shadow">earth-6</div>
+        <div class="earth-7 color-tile rad-shadow">earth-7</div>
+        <div class="earth-8 color-tile rad-shadow">earth-8</div>
+        <div class="earth-9 color-tile rad-shadow">earth-9</div>
+      </div>
+
+      <h4>Neutral Tones</h4>
+      <div class="color-grid">
+        <div class="neutral-1 color-tile rad-shadow">neutral-1</div>
+        <div class="neutral-2 color-tile rad-shadow">neutral-2</div>
+        <div class="neutral-3 color-tile rad-shadow">neutral-3</div>
+        <div class="neutral-4 color-tile rad-shadow">neutral-4</div>
+        <div class="neutral-5 color-tile rad-shadow">neutral-5</div>
+        <div class="neutral-6 color-tile rad-shadow">neutral-6</div>
+        <div class="neutral-7 color-tile rad-shadow">neutral-7</div>
+        <div class="neutral-8 color-tile rad-shadow">neutral-8</div>
+        <div class="neutral-9 color-tile rad-shadow">neutral-9</div>
+      </div>
+
+      <h4>Neon Tones</h4>
+      <div class="color-grid">
+        <div class="neon-1 color-tile rad-shadow">neon-1</div>
+        <div class="neon-2 color-tile rad-shadow">neon-2</div>
+        <div class="neon-3 color-tile rad-shadow">neon-3</div>
+        <div class="neon-4 color-tile rad-shadow">neon-4</div>
+        <div class="neon-5 color-tile rad-shadow">neon-5</div>
+        <div class="neon-6 color-tile rad-shadow">neon-6</div>
+        <div class="neon-7 color-tile rad-shadow">neon-7</div>
+        <div class="neon-8 color-tile rad-shadow">neon-8</div>
+        <div class="neon-9 color-tile rad-shadow">neon-9</div>
       </div>
     </div>
     <script src="js/main.js"></script>
