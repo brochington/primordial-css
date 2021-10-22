@@ -1,0 +1,32 @@
+:root {
+  --p-nav-bgd-color-1: var(--p-surface-2);
+  --p-nav-row-height: 32px;
+  --p-nav-row-align-item: center;
+  --p-nav-row-margin: 0;
+  --p-nav-row-padding: 2rem;
+}
+
+ul[p-navigation] {
+  list-style-type: none;
+}
+
+ul[p-navigation="row"] {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  padding: 0;
+  background-color: var(--p-nav-bgd-color-1);
+  height: var(--p-nav-row-height);
+  align-items: var(--p-nav-row-align-item);
+  margin: var(--p-nav-row-margin);
+  padding: var(--p-nav-row-padding);
+}
+
+ul[p-navigation="column"] {
+  display: grid;
+
+}
+
+/* li[p-navigation-item] {
+
+} */

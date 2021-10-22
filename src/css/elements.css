@@ -1,0 +1,17 @@
+:root {
+  --p-link-font-family: var(--p-font-family-1);
+  --p-link-color: var(--p-brand);
+  --p-link-visited-color: var(--p-text-2);
+}
+
+a[p-link] {
+  text-decoration: none;
+  font-family: var(--p-link-font-family);
+  color: var(--p-link-color);
+}
+
+a[p-link]:visited {
+  text-decoration: none;
+  font-family: var(--p-link-font-family);
+  color: var(--p-link-color);
+}

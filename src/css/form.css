@@ -1,5 +1,6 @@
 :root {
-  -p-label-color: var(--p-text-1)
+  --p-label-color-1: var(--p-text-1);
+  --p-label-font-family-1: var(--p-font-family-1);
 }
 
 
@@ -8,7 +9,8 @@
 /* label */
 
 label {
-  color: var(--midnight-jam);
+  color: var(--p-label-color-1);
+  font-family: var(--p-label-font-family-1);
 }
 
 label[p-location="top"] {

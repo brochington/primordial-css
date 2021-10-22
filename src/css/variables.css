@@ -8,15 +8,22 @@
   --p-font-family-4: initial;
   
   /* brand foundation */
-  --p-brand-hue: 200;
-  --p-brand-saturation: 100%;
+  --p-brand-hue: 173;
+  /* --p-brand-hue: 200; */
+  --p-brand-saturation: 80%;
   --p-brand-lightness: 50%;
+
+  /* accent foundation */
+  --p-accent-hue: calc(var(--p-brand-hue) + 100);
+  --p-accent-saturation: 80%;
+  --p-accent-lightness: 50%;
 
   /* light */
   --p-brand-light: hsl(
-    var(--p-p-brand-hue) var(--p-p-brand-saturation) var(--p-p-brand-lightness)
+    var(--p-brand-hue) var(--p-brand-saturation) var(--p-brand-lightness)
   );
-  --p-text-1-light: hsl(var(--p-brand-hue) var(--p-p-brand-saturation) 10%);
+  --p-accent-light: hsl(var(--p-accent-hue) var(--p-accent-saturation) var(--p-accent-lightness));
+  --p-text-1-light: hsl(var(--p-brand-hue) var(--p-brand-saturation) 10%);
   --p-text-2-light: hsl(var(--p-brand-hue) 30% 30%);
   --p-surface-1-light: hsl(var(--p-brand-hue) 25% 90%);
   --p-surface-2-light: hsl(var(--p-brand-hue) 20% 99%);
@@ -30,6 +37,7 @@
     var(--p-brand-hue) calc(var(--p-brand-saturation) / 2)
       calc(var(--p-brand-lightness) / 1.5)
   );
+  --p-accent-dark: hsl(var(--p-accent-hue) calc(var(--p-accent-saturation) / 2) calc(var(--p-accent-lightness) / 1.5));
   --p-text-1-dark: hsl(var(--p-brand-hue) 15% 85%);
   --p-text-2-dark: hsl(var(--p-brand-hue) 5% 65%);
   --p-surface-1-dark: hsl(var(--p-brand-hue) 10% 10%);
@@ -44,6 +52,7 @@
     var(--p-brand-hue) calc(var(--p-brand-saturation) / 1.25)
       calc(var(--p-brand-lightness) / 1.25)
   );
+  --p-accent-dim: hsl(var(--p-accent-hue) calc(var(--p-accent-saturation) / 1.25) calc(var(--p-accent-lightness) / 1.25));
   --p-text-1-dim: hsl(var(--p-brand-hue) 15% 75%);
   --p-text-2-dim: hsl(var(--p-brand-hue) 10% 61%);
   --p-surface-1-dim: hsl(var(--p-brand-hue) 10% 20%);
@@ -57,6 +66,7 @@
 
   /* set defaults */
   --p-brand: var(--p-brand-light);
+  --p-accent: var(--p-accent-light);
   --p-text-1: var(--p-text-1-light);
   --p-text-2: var(--p-text-2-light);
   --p-surface-1: var(--p-surface-1-light);
@@ -72,6 +82,7 @@
     color-scheme: dark;
 
     --p-brand: var(--p-brand-dark);
+    --p-accent: var(--p-accent-dark);
     --p-text-1: var(--p-text-1-dark);
     --p-text-2: var(--p-text-2-dark);
     --p-surface-1: var(--p-surface-1-dark);
@@ -87,6 +98,7 @@
   color-scheme: light;
 
   --p-brand: var(--p-brand-light);
+  --p-accent: var(--p-accent-light);
   --p-text-1: var(--p-text-1-light);
   --p-text-2: var(--p-text-2-light);
   --p-surface-1: var(--p-surface-1-light);
@@ -101,6 +113,7 @@
   color-scheme: dark;
 
   --p-brand: var(--p-brand-dark);
+  --p-accent: var(--p-accent-dark);
   --p-text-1: var(--p-text-1-dark);
   --p-text-2: var(--p-text-2-dark);
   --p-surface-1: var(--p-surface-1-dark);
@@ -115,6 +128,7 @@
   color-scheme: dark;
 
   --p-brand: var(--p-brand-dim);
+  --p-accent: var(--p-accent-dim);
   --p-text-1: var(--p-text-1-dim);
   --p-text-2: var(--p-text-2-dim);
   --p-surface-1: var(--p-surface-1-dim);

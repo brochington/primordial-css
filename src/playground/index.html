@@ -3,39 +3,36 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="./css/horizon-styles.css" />
     <link rel="stylesheet" type="text/css" href="../css/primordial.css" />
-    <link rel="stylesheet" type="text/css" href="./playground.css" />
+    <link rel="stylesheet" type="text/css" href="./css/playground.css" />
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
-      :root {
-        --p-font-family-1: 'Inter', sans-serif;
-      }
 
-      #color-scheme-group {
-        display: grid;
-        grid-template-columns: 3rem 1fr;
-        grid-template-rows: auto;
-      }
     </style>
     <title>primordial-css</title>
   </head>
 
-  <body class="m4">
-    <div>
-      <form id="color-scheme-form">
+  <body class="">
+    <ul p-navigation="row">
+      <li p-navigation-item>
+        <a p-link href="/src/playground/index.html">Home</a>
+      </li>
+      <li p-navigation-item>
+        <a p-link href="/src/playground/buttons.html">Buttons</a>
+      </li>
+      <li p-navigation-item>
+        <a p-link href="/src/playground/colors.html">Colors</a>
+      </li>
+    </ul>
+    <div class="">
+      <form id="color-scheme-form" class="row items-center">
         <fieldset id="color-scheme-group">
-          <label>
-            light
-            <input type="radio" value="light" name="color-scheme-group">
-          </label>
-          <label>
-            dark
-            <input type="radio" value="dark" name="color-scheme-group">
-          </label>
-          <label>
-            dim
-            <input type="radio" value="dim" name="color-scheme-group">
-          </label>
+          <label for="light">light</label>
+          <input id="light" type="radio" value="light" name="color-scheme-group">
+          <label for="dark">dark</label>
+          <input id="dark" type="radio" value="dark" name="color-scheme-group">
+          <label for="dim">dim</label>
+          <input id="dim" type="radio" value="dim" name="color-scheme-group">
         </fieldset>
       </form>
     </div>
@@ -101,56 +98,6 @@
           type="text"
           value="brochington@gmail.com"
         ></textarea>
-      </div>
-    </section>
-    <section>
-      <h3>Buttons</h3>
-      <h4>Primary</h4>
-      <div style="margin-bottom: 16px">
-        <div
-          style="
-            display: grid;
-            grid-template-columns: 100px repeat(3, 170px);
-            gap: 12px;
-            justify-items: center;
-          "
-        >
-          <div>
-            <button p-type="primary" p-size="xs">I'm a button</button>
-          </div>
-          <div>
-            <button p-type="primary" p-size="sm">I'm a button</button>
-          </div>
-          <div>
-            <button p-type="primary" p-size="md">I'm a button</button>
-          </div>
-          <div>
-            <button p-type="primary" p-size="lg">I'm a button</button>
-          </div>
-        </div>
-
-        <h4>Outline</h4>
-        <div
-          style="
-            display: grid;
-            grid-template-columns: 100px repeat(3, 170px);
-            gap: 12px;
-            justify-items: center;
-          "
-        >
-          <div>
-            <button p-type="outline" p-size="xs">I'm a button</button>
-          </div>
-          <div>
-            <button p-type="outline" p-size="sm">I'm a button</button>
-          </div>
-          <div>
-            <button p-type="outline" p-size="md">I'm a button</button>
-          </div>
-          <div>
-            <button p-type="outline" p-size="lg">I'm a button</button>
-          </div>
-        </div>
       </div>
     </section>
     <section>

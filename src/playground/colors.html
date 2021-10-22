@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="./css/horizon-styles.css" />
+    <link rel="stylesheet" type="text/css" href="../css/primordial.css" />
+    <link rel="stylesheet" type="text/css" href="./css/playground.css" />
+    <style>
+      .color-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 8rem);
+        grid-template-rows: 100px;
+        gap: 1rem;
+      }
+
+      .color-tile {
+        display: flex;
+        justify-content: start;
+        align-items: start;
+        padding: 4px 8px;
+        font-family: var(--p-font-family-1);
+      }
+
+      .brand-1 {
+        background-color: var(--p-brand);
+      }
+
+      .accent-1 {
+        background-color: var(--p-accent);
+      }
+
+      .text-1 {
+        background-color: var(--p-text-1);
+      }
+
+      .text-2 {
+        background-color: var(--p-text-2);
+      }
+
+      .surface-1 {
+        background-color: var(--p-surface-1);
+      }
+      .surface-2 {
+        background-color: var(--p-surface-2);
+      }
+      .surface-3 {
+        background-color: var(--p-surface-3);
+      }
+      .surface-4 {
+        background-color: var(--p-surface-4);
+      }
+
+      .rad-shadow {
+        border: 1px solid hsl(var(--p-brand-hue) 10% 50% / 15%);
+        box-shadow: 0 1rem 0.5rem -0.5rem;
+        box-shadow: 0 2.8px 2.2px
+            hsl(var(--p-surface-shadow) / calc(var(--p-shadow-strength) + 0.03)),
+          0 6.7px 5.3px
+            hsl(var(--p-surface-shadow) / calc(var(--p-shadow-strength) + 0.01)),
+          0 12.5px 10px
+            hsl(var(--p-surface-shadow) / calc(var(--p-shadow-strength) + 0.02)),
+          0 22.3px 17.9px
+            hsl(var(--p-surface-shadow) / calc(var(--p-shadow-strength) + 0.02)),
+          0 41.8px 33.4px
+            hsl(var(--p-surface-shadow) / calc(var(--p-shadow-strength) + 0.03)),
+          0 100px 80px hsl(var(--p-surface-shadow) / var(--p-shadow-strength));
+      }
+    </style>
+    <title>Colors</title>
+  </head>
+  <body>
+    <ul p-navigation="row">
+      <li p-navigation-item>
+        <a p-link href="/src/playground/index.html">Home</a>
+      </li>
+      <li p-navigation-item>
+        <a p-link href="/src/playground/buttons.html">Buttons</a>
+      </li>
+      <li p-navigation-item>
+        <a p-link href="/src/playground/colors.html">Colors</a>
+      </li>
+    </ul>
+    <form id="color-scheme-form" class="row items-center">
+      <fieldset id="color-scheme-group">
+        <label for="light">light</label>
+        <input
+          id="light"
+          type="radio"
+          value="light"
+          name="color-scheme-group"
+        />
+        <label for="dark">dark</label>
+        <input id="dark" type="radio" value="dark" name="color-scheme-group" />
+        <label for="dim">dim</label>
+        <input id="dim" type="radio" value="dim" name="color-scheme-group" />
+      </fieldset>
+    </form>
+    <div class="m4">
+      <h1>Colors</h1>
+      <div class="color-grid">
+        <div class="brand-1 color-tile rad-shadow">brand</div>
+        <div class="accent-1 color-tile rad-shadow">accent</div>
+        <div class="text-1 color-tile rad-shadow">text-1</div>
+        <div class="text-2 color-tile rad-shadow">text-2</div>
+
+        <div class="surface-1 color-tile rad-shadow">surface-1</div>
+        <div class="surface-2 color-tile rad-shadow">surface-2</div>
+        <div class="surface-3 color-tile rad-shadow">surface-3</div>
+        <div class="surface-4 color-tile rad-shadow">surface-4</div>
+      </div>
+    </div>
+    <script src="js/main.js"></script>
+  </body>
+</html>

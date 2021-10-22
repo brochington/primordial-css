@@ -1,24 +1,3 @@
-:root {
- /* TODO */
- --aaaaa: purple; 
-}
-
-
-/* label */
-
-label {
-  color: var(--midnight-jam);
-}
-
-label[p-location="top"] {
- display: inline-block;
- margin-bottom: 8px;
-}
-
-label[p-location="left"] {
- margin-top: 8px;
-}
-
 /* Input */
 
 input {

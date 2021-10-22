@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="./css/horizon-styles.css" />
+  <link rel="stylesheet" type="text/css" href="../css/primordial.css" />
+  <link rel="stylesheet" type="text/css" href="./css/playground.css" />
+  <title>Buttons</title>
+</head>
+<body>
+  <ul p-navigation="row">
+    <li p-navigation-item>
+      <a p-link href="/src/playground/index.html">Home</a>
+    </li>
+    <li p-navigation-item>
+      <a p-link href="/src/playground/buttons.html">Buttons</a>
+    </li>
+    <li p-navigation-item>
+      <a p-link href="/src/playground/colors.html">Colors</a>
+    </li>
+  </ul>
+  <form id="color-scheme-form" class="row items-center">
+    <fieldset id="color-scheme-group">
+      <label for="light">light</label>
+      <input id="light" type="radio" value="light" name="color-scheme-group">
+      <label for="dark">dark</label>
+      <input id="dark" type="radio" value="dark" name="color-scheme-group">
+      <label for="dim">dim</label>
+      <input id="dim" type="radio" value="dim" name="color-scheme-group">
+    </fieldset>
+  </form>
+  <div class="m4">
+    <section>
+      <h3>Buttons</h3>
+      <h4>Primary</h4>
+      <div style="margin-bottom: 16px">
+        <div
+          style="
+            display: grid;
+            grid-template-columns: 100px repeat(3, 170px);
+            gap: 12px;
+            justify-items: center;
+          "
+        >
+          <div>
+            <button p-type="primary" p-size="xs">I'm a button</button>
+          </div>
+          <div>
+            <button p-type="primary" p-size="sm">I'm a button</button>
+          </div>
+          <div>
+            <button p-type="primary" p-size="md">I'm a button</button>
+          </div>
+          <div>
+            <button p-type="primary" p-size="lg">I'm a button</button>
+          </div>
+        </div>
+
+        <h4>Outline</h4>
+        <div
+          style="
+            display: grid;
+            grid-template-columns: 100px repeat(3, 170px);
+            gap: 12px;
+            justify-items: center;
+          "
+        >
+          <div>
+            <button p-type="outline" p-size="xs">I'm a button</button>
+          </div>
+          <div>
+            <button p-type="outline" p-size="sm">I'm a button</button>
+          </div>
+          <div>
+            <button p-type="outline" p-size="md">I'm a button</button>
+          </div>
+          <div>
+            <button p-type="outline" p-size="lg">I'm a button</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script src="js/main.js"></script>
+</body>
+</html>

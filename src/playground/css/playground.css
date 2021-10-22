@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+:root {
+  --p-font-family-1: 'Inter', sans-serif;
+}
+
+body {
+  background-color: var(--p-surface-1);
+}
+
+#color-scheme-group {
+  display: grid;
+  grid-template-columns: 3rem 1fr;
+  grid-template-rows: auto;
+  align-items: center;
+}
