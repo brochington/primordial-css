@@ -17,6 +17,14 @@ function main() {
   colorSchemeForm?.addEventListener('change', (evt) =>
     setColorScheme(evt.target.value)
   );
+
+  // Hue leap range
+  document.querySelector('#hue-leap-range')?.addEventListener('change', (evt) => {
+    console.log('here.');
+
+    document.querySelector(':root')?.style.setProperty('--p-hue-leap', evt.target.value);
+    // document.querySelector(':root')?.style.setProperty('--hue-leap', evt.target.value);
+  })
 }
 
 window.addEventListener('DOMContentLoaded', main);

@@ -73,7 +73,7 @@ const config = {
 };
 
 module.exports = {
-  path: "src/playground/css",
+  path: "src/playground/styles",
   filename: "horizon-styles.css",
   docPath: "docs/styles/site",
   config,

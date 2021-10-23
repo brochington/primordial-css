@@ -1,6 +1,7 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const RemoveEmptyScriptsPlugin = require('webpack-remove-empty-scripts');
+const postcssPresetEnv = require('postcss-preset-env');
 
 module.exports = {
   entry: [
@@ -22,17 +23,15 @@ module.exports = {
         options: {
           importLoaders: 1
         }
-      // }, {
-      //   loader: 'postcss-loader',
-      //   options: {
-      //     postcssOptions: {
-      //       plugins: [
-      //         horizon,
-      //         postcssPresetEnv({ stage: 0 }),
-      //         colorFunction({ preserveCustomProps: false })
-      //       ]
-      //     }
-      //   }
+      }, {
+        loader: 'postcss-loader',
+        options: {
+          postcssOptions: {
+            plugins: [
+              postcssPresetEnv({ stage: 0 }),
+            ]
+          }
+        }
       }]
     }]
   },

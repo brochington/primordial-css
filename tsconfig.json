@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    "sourceMap": true,
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "allowJs": true,
+    "noEmit": true,
+    "strict": true,
+    "esModuleInterop": true,
+    "jsx": "react",
+    "baseUrl": ".",
+    "paths": {
+      "types/*": ["src/playground/types/*"],
+      "styles": ["src/playground/styles/*"],
+      "components/*": ["src/playground/components/*"],
+      "pages/*": ["src/playground/pages/*"],
+      "actions/*": ["src/playground/actions/*"],
+      "actions": ["src/playground/actions/index.ts"],
+      "contexts/*": ["src/playground/contexts/*"],
+      "utils/*": ["src/playground/utils/*"],
+      "constants/*": ["src/playground/constants/*"],
+      "services/*": ["src/playground/services/*"],
+      "records/*": ["src/playground/records/*"],
+      "hooks/*": ["src/playground/hooks/*"],
+      "machines/*": ["src/playground/machines/*"],
+      "img/*": ["src/playground/img/*"]
+    }
+  },
+  "include": [
+    "src/playground"
+  ]
+}

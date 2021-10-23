@@ -1,4 +1,6 @@
 /* https://github.com/argyleink/gui-challenges/blob/main/color-schemes/style.css */
+/* Colorizer: http://colorizer.org/ */
+/* https://css-tricks.com/switch-font-color-for-different-backgrounds-with-css/ */
 
 /*
 # Color Theory: https://www.youtube.com/watch?v=GyVMoejbGFg
@@ -49,7 +51,7 @@ HSB:
 - B 0-100
 HSL: 
 - S 0-0
-- B 0-100
+- L 0-100
 
 
 Neutral + Shades + a tone
@@ -73,7 +75,7 @@ Neutral + Shades + a tone
   --p-accent-saturation: 80%;
   --p-accent-lightness: 50%;
 
-  --p-hue-leap: 40;
+  --p-hue-leap: 48;
 
   --p-hue-1: var(--p-brand-hue);
   --p-hue-2: calc(var(--p-brand-hue) + calc(var(--p-hue-leap) * 1));
@@ -84,9 +86,9 @@ Neutral + Shades + a tone
   --p-hue-7: calc(var(--p-brand-hue) + calc(var(--p-hue-leap) * 6));
   --p-hue-8: calc(var(--p-brand-hue) + calc(var(--p-hue-leap) * 7));
   --p-hue-9: calc(var(--p-brand-hue) + calc(var(--p-hue-leap) * 8));
-  /* --p-hue-1: 10;
-  --p-hue-2: 70;
-  --p-hue-3: 140;
+  /* --p-hue-1: 0;
+  --p-hue-2: 230;
+  --p-hue-3: 120;
   --p-hue-4: 210;
   --p-hue-5: 270; */
 
