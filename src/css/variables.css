@@ -164,6 +164,8 @@ Neutral + Shades + a tone
   --p-accent-light: hsl(var(--p-accent-hue) var(--p-accent-saturation) var(--p-accent-lightness));
   --p-text-1-light: hsl(var(--p-brand-hue) var(--p-brand-saturation) 10%);
   --p-text-2-light: hsl(var(--p-brand-hue) 30% 30%);
+  --p-text-invert-light: hsl(var(--p-brand-hue) var(--p-brand-saturation) 90%);
+  --p-btn-1-light: hsl(var(--p-brand-hue) var(--p-brand-saturation) 10%);
   --p-surface-1-light: hsl(var(--p-brand-hue) 25% 90%);
   --p-surface-2-light: hsl(var(--p-brand-hue) 20% 99%);
   --p-surface-3-light: hsl(var(--p-brand-hue) 20% 92%);
@@ -179,6 +181,8 @@ Neutral + Shades + a tone
   --p-accent-dark: hsl(var(--p-accent-hue) calc(var(--p-accent-saturation) / 2) calc(var(--p-accent-lightness) / 1.5));
   --p-text-1-dark: hsl(var(--p-brand-hue) 15% 85%);
   --p-text-2-dark: hsl(var(--p-brand-hue) 5% 65%);
+  --p-text-invert-dark: hsl(var(--p-brand-hue) var(--p-brand-saturation) 10%);
+  --p-btn-1-dark: hsl(var(--p-brand-hue) 15% 85%);
   --p-surface-1-dark: hsl(var(--p-brand-hue) 10% 10%);
   --p-surface-2-dark: hsl(var(--p-brand-hue) 10% 15%);
   --p-surface-3-dark: hsl(var(--p-brand-hue) 5% 20%);
@@ -194,6 +198,8 @@ Neutral + Shades + a tone
   --p-accent-dim: hsl(var(--p-accent-hue) calc(var(--p-accent-saturation) / 1.25) calc(var(--p-accent-lightness) / 1.25));
   --p-text-1-dim: hsl(var(--p-brand-hue) 15% 75%);
   --p-text-2-dim: hsl(var(--p-brand-hue) 10% 61%);
+  --p-text-invert-dim: hsl(var(--p-brand-hue) var(--p-brand-saturation) 10%);
+  --p-btn-1-dim: hsl(var(--p-brand-hue) 15% 75%);
   --p-surface-1-dim: hsl(var(--p-brand-hue) 10% 20%);
   --p-surface-2-dim: hsl(var(--p-brand-hue) 10% 25%);
   --p-surface-3-dim: hsl(var(--p-brand-hue) 5% 30%);
@@ -208,6 +214,8 @@ Neutral + Shades + a tone
   --p-accent: var(--p-accent-light);
   --p-text-1: var(--p-text-1-light);
   --p-text-2: var(--p-text-2-light);
+  --p-text-invert: var(--p-text-invert-light);
+  --p-btn-1: var(--p-btn-1-light);
   --p-surface-1: var(--p-surface-1-light);
   --p-surface-2: var(--p-surface-2-light);
   --p-surface-3: var(--p-surface-3-light);
@@ -224,6 +232,8 @@ Neutral + Shades + a tone
     --p-accent: var(--p-accent-dark);
     --p-text-1: var(--p-text-1-dark);
     --p-text-2: var(--p-text-2-dark);
+    --p-text-invert: var(--p-text-invert-dark);
+    --p-btn-1: var(--p-btn-1-dark);
     --p-surface-1: var(--p-surface-1-dark);
     --p-surface-2: var(--p-surface-2-dark);
     --p-surface-3: var(--p-surface-3-dark);
@@ -240,6 +250,8 @@ Neutral + Shades + a tone
   --p-accent: var(--p-accent-light);
   --p-text-1: var(--p-text-1-light);
   --p-text-2: var(--p-text-2-light);
+  --p-text-invert: var(--p-text-invert-light);
+  --p-btn-1: var(--p-btn-1-light);
   --p-surface-1: var(--p-surface-1-light);
   --p-surface-2: var(--p-surface-2-light);
   --p-surface-3: var(--p-surface-3-light);
@@ -255,6 +267,8 @@ Neutral + Shades + a tone
   --p-accent: var(--p-accent-dark);
   --p-text-1: var(--p-text-1-dark);
   --p-text-2: var(--p-text-2-dark);
+  --p-text-invert: var(--p-text-invert-dark);
+  --p-btn-1: var(--p-btn-1-dark);
   --p-surface-1: var(--p-surface-1-dark);
   --p-surface-2: var(--p-surface-2-dark);
   --p-surface-3: var(--p-surface-3-dark);
@@ -270,6 +284,8 @@ Neutral + Shades + a tone
   --p-accent: var(--p-accent-dim);
   --p-text-1: var(--p-text-1-dim);
   --p-text-2: var(--p-text-2-dim);
+  --p-text-invert: var(--p-text-invert-dim);
+  --p-btn-1: var(--p-btn-1-dim);
   --p-surface-1: var(--p-surface-1-dim);
   --p-surface-2: var(--p-surface-2-dim);
   --p-surface-3: var(--p-surface-3-dim);

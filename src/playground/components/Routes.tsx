@@ -6,6 +6,7 @@ import Sidebar from 'components/Sidebar';
 import HomePage from 'pages/HomePage';
 import HeadingsPage from 'pages/HeadingsPage';
 import ButtonsPage from 'pages/ButtonsPage';
+import ColorsPage from 'pages/ColorsPage';
 
 type Props = {};
 
@@ -15,21 +16,24 @@ const Routes: FC<Props> = (props: Props) => {
   return (
     <Router>
       <div
+        className="h100"
         style={{
           display: 'grid',
-          gridTemplateColumns: '400px 1fr',
-          gridTemplateRows: '100%',
+          gridTemplateColumns: '17rem 1fr',
+          gridTemplateRows: '100vh',
         }}
       >
-        <div>
+        <div className="">
           <Sidebar />
         </div>
+        <div className="os vh100 pb8">
         <Switch>
           <Route exact path="/" component={HomePage} />
           <Route exact path="/headings" component={HeadingsPage} />
           <Route exact path="/buttons" component={ButtonsPage} />
-          <Route exact path="/colors" component={() => <div>Colors</div>} />
+          <Route exact path="/colors" component={ColorsPage} />
         </Switch>
+        </div>
       </div>
     </Router>
   );

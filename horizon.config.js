@@ -64,7 +64,15 @@ const config = {
     8: '4rem',
     9: '5rem',
   },
-  borders: [],
+  borders: [
+    {
+      key: '1',
+      style: 'solid',
+      color: 'var(--greenland-blue)',
+      width: '1px',
+      radius: '4px',
+    },
+  ],
   gaps: {
     1: '1rem',
     2: '2rem',
