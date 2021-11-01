@@ -58,6 +58,8 @@ const ButtonsPage: FC<Props> = (props: Props) => {
     <div>
       <h1>Buttons</h1>
 
+      <h2>Variants</h2>
+
       <h3>Solid</h3>
       <ButtonRow variant="solid" color="brand" />
 

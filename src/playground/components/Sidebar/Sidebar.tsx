@@ -9,24 +9,6 @@ type Props = {};
 const Sidebar: FC<Props> = (props: Props) => {
   const {} = props;
 
-  useEffect(() => {
-    let obs = new MutationObserver((mutations) => {
-      mutations.forEach((mutation) => {
-        console.log('mut', mutation);
-      });
-    });
-
-    let obsConfig = {
-      attributes: true
-    };
-
-    let target = document.querySelector(':root');
-
-    if (target) {
-      obs.observe(target, obsConfig);
-    }      
-  }, []);
-
   return (
     <div
       className="p4 mr4 h100"

@@ -25,31 +25,28 @@ const babelLoaderConfig = {
 module.exports = {
   mode: 'development',
   entry: [
-    // 'webpack-hot-middleware/client',
     path.join(process.cwd(), 'src/playground/index.tsx')
   ],
   output: {
     filename: '[name].bundle.js',
     path: path.join(process.cwd(), 'dist'),
-    // publicPath: '/static/',
     clean: true,
   },
   devtool: 'inline-source-map',
   resolve: {
     alias: {
       ...aliases,
-      // 'react-dom': '@hot-loader/react-dom'
     },
     extensions: ['.js', '.mjs', '.ts', '.tsx', '.wasm'],
   },
   module: {
     rules: [{
       test: /\.ts(x?)$/,
-      include: path.join(process.cwd(), 'src/playground'),
+      include: path.join(process.cwd(), 'src'),
       use: [babelLoaderConfig]
     }, {
       test: /\.m?js$/,
-      include: path.join(process.cwd(), 'src/playground'),
+      include: path.join(process.cwd(), 'src'),
       use: [babelLoaderConfig]
     }, {
       test: /\.(png|svg|jpg|jpeg|gif)$/i,

@@ -1,21 +1,30 @@
-import React, { FC } from 'react';
+import React, { FC, PropsWithChildren } from 'react';
+import isNumber from 'lodash/isNumber';
 
 type ColorTileProps = {
   name: string;
+  num?: number;
 };
 
 const ColorTile: FC<ColorTileProps> = (props: ColorTileProps) => {
-  const { name } = props;
+  const { name, num } = props;
+
+  console.log('a');
+
+  const numStr = isNumber(num) ? `-${num}` : '';
 
   return (
+    <>
     <div
       className="flex justify-start items-start py1 px2"
       style={{
-        backgroundColor: `var(--p-${name})`,
+        color: `var(--p-${name}${numStr}-text)`,
+        backgroundColor: `var(--p-${name}${numStr})`,
       }}
     >
-      {name}
+      {`${name} ${num ?? ''}`}
     </div>
+    </>
   );
 };
 
@@ -55,81 +64,95 @@ const ColorsPage: FC<Props> = (props: Props) => {
 
         <h3>Text</h3>
         <ColorGrid>
-          <ColorTile name="text-1" />
-          <ColorTile name="text-2" />
+          <ColorTile name="text" num={1} />
+          <ColorTile name="text" num={2} />
         </ColorGrid>
 
         <h3>Surface</h3>
         <ColorGrid>
-          <ColorTile name="surface-1" />
-          <ColorTile name="surface-2" />
-          <ColorTile name="surface-3" />
-          <ColorTile name="surface-4" />
+          <ColorTile name="surface" num={1}/>
+          <ColorTile name="surface" num={2}/>
+          <ColorTile name="surface" num={3}/>
+          <ColorTile name="surface" num={4}/>
+        </ColorGrid>
+
+        <h3>Grays</h3>
+        <ColorGrid>
+          <ColorTile name="gray" num={0} />
+          <ColorTile name="gray" num={1} />
+          <ColorTile name="gray" num={2} />
+          <ColorTile name="gray" num={3} />
+          <ColorTile name="gray" num={4} />
+          <ColorTile name="gray" num={5} />
+          <ColorTile name="gray" num={6} />
+          <ColorTile name="gray" num={7} />
+          <ColorTile name="gray" num={8} />
+          <ColorTile name="gray" num={9} />
         </ColorGrid>
 
         <h3>Jewel</h3>
         <ColorGrid>
-          <ColorTile name="jewel-1" />
-          <ColorTile name="jewel-2" />
-          <ColorTile name="jewel-3" />
-          <ColorTile name="jewel-4" />
-          <ColorTile name="jewel-5" />
-          <ColorTile name="jewel-6" />
-          <ColorTile name="jewel-7" />
-          <ColorTile name="jewel-8" />
-          <ColorTile name="jewel-9" />
+          <ColorTile name="jewel" num={1} />
+          <ColorTile name="jewel" num={2} />
+          <ColorTile name="jewel" num={3} />
+          <ColorTile name="jewel" num={4} />
+          <ColorTile name="jewel" num={5} />
+          <ColorTile name="jewel" num={6} />
+          <ColorTile name="jewel" num={7} />
+          <ColorTile name="jewel" num={8} />
+          <ColorTile name="jewel" num={9} />
         </ColorGrid>
 
         <h3>Pastel</h3>
         <ColorGrid>
-          <ColorTile name="pastel-1" />
-          <ColorTile name="pastel-2" />
-          <ColorTile name="pastel-3" />
-          <ColorTile name="pastel-4" />
-          <ColorTile name="pastel-5" />
-          <ColorTile name="pastel-6" />
-          <ColorTile name="pastel-7" />
-          <ColorTile name="pastel-8" />
-          <ColorTile name="pastel-9" />
+          <ColorTile name="pastel" num={1} />
+          <ColorTile name="pastel" num={2} />
+          <ColorTile name="pastel" num={3} />
+          <ColorTile name="pastel" num={4} />
+          <ColorTile name="pastel" num={5} />
+          <ColorTile name="pastel" num={6} />
+          <ColorTile name="pastel" num={7} />
+          <ColorTile name="pastel" num={8} />
+          <ColorTile name="pastel" num={9} />
         </ColorGrid>
 
         <h3>Earth</h3>
         <ColorGrid>
-          <ColorTile name="earth-1" />
-          <ColorTile name="earth-2" />
-          <ColorTile name="earth-3" />
-          <ColorTile name="earth-4" />
-          <ColorTile name="earth-5" />
-          <ColorTile name="earth-6" />
-          <ColorTile name="earth-7" />
-          <ColorTile name="earth-8" />
-          <ColorTile name="earth-9" />
+          <ColorTile name="earth" num={1} />
+          <ColorTile name="earth" num={2} />
+          <ColorTile name="earth" num={3} />
+          <ColorTile name="earth" num={4} />
+          <ColorTile name="earth" num={5} />
+          <ColorTile name="earth" num={6} />
+          <ColorTile name="earth" num={7} />
+          <ColorTile name="earth" num={8} />
+          <ColorTile name="earth" num={9} />
         </ColorGrid>
 
         <h3>Neutral</h3>
         <ColorGrid>
-          <ColorTile name="neutral-1" />
-          <ColorTile name="neutral-2" />
-          <ColorTile name="neutral-3" />
-          <ColorTile name="neutral-4" />
-          <ColorTile name="neutral-5" />
-          <ColorTile name="neutral-6" />
-          <ColorTile name="neutral-7" />
-          <ColorTile name="neutral-8" />
-          <ColorTile name="neutral-9" />
+          <ColorTile name="neutral" num={1} />
+          <ColorTile name="neutral" num={2} />
+          <ColorTile name="neutral" num={3} />
+          <ColorTile name="neutral" num={4} />
+          <ColorTile name="neutral" num={5} />
+          <ColorTile name="neutral" num={6} />
+          <ColorTile name="neutral" num={7} />
+          <ColorTile name="neutral" num={8} />
+          <ColorTile name="neutral" num={9} />
         </ColorGrid>
 
         <h3>Neon</h3>
         <ColorGrid>
-          <ColorTile name="neon-1" />
-          <ColorTile name="neon-2" />
-          <ColorTile name="neon-3" />
-          <ColorTile name="neon-4" />
-          <ColorTile name="neon-5" />
-          <ColorTile name="neon-6" />
-          <ColorTile name="neon-7" />
-          <ColorTile name="neon-8" />
-          <ColorTile name="neon-9" />
+          <ColorTile name="neon" num={1} />
+          <ColorTile name="neon" num={2} />
+          <ColorTile name="neon" num={3} />
+          <ColorTile name="neon" num={4} />
+          <ColorTile name="neon" num={5} />
+          <ColorTile name="neon" num={6} />
+          <ColorTile name="neon" num={7} />
+          <ColorTile name="neon" num={8} />
+          <ColorTile name="neon" num={9} />
         </ColorGrid>
       </div>
     </div>

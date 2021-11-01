@@ -31,7 +31,7 @@
 
   /* brand */
   --p-btn-brand-color: var(--p-brand);
-  --p-btn-brand-text: var(--p-text-1);
+  --p-btn-brand-text: var(--p-brand-text);
 
   /* accent */
   --p-btn-accent-color: var(--p-accent);
@@ -98,8 +98,8 @@ button[p-size='xl'] {
 /* ----------------------------- Solid ----------------------------- */
 
 button[p-variant='solid'] {
-  /* background-color: var(--bgd-dark-5); */
-  /* color: var(--p-button-fill-solid-color); */
+  background-color: var(--p-btn-base-color);
+  color: var(--p-btn-base-text);
 
 }
 
@@ -115,20 +115,21 @@ button[p-variant='link'] {
 /* solid brand */
 
 button[p-variant="solid"][p-color="brand"] {
-  background-color: var(--p-btn-base-color);
-  color: var(--p-btn-base-text);
+  background-color: var(--p-brand);
+  color: var(--p-brand-text);
 }
 
 button[p-variant='solid'][p-color='brand']:hover {
-  background-color: var(--brand-3);
+  background-color: hsl(calc(var(--p-brand-hue) + 2), calc(var(--p-brand-saturation) - 3%), calc(var(--p-brand-lightness) - 7%));
 }
 
 button[p-variant='solid'][p-color='brand']:focus {
-  /* TODO */
+  --focused-color: hsl(calc(var(--p-brand-hue) + 10), calc(var(--p-brand-saturation) + 6%), calc(var(--p-brand-lightness) - 10%));
+  outline: solid 3px var(--focused-color);
 }
 
 button[p-variant='solid'][p-color='brand']:active {
-  background-color: var(--brand-1);
+  background-color: hsl(calc(var(--p-brand-hue) + 4), calc(var(--p-brand-saturation) - 6%), calc(var(--p-brand-lightness) - 12%));
 }
 
 button[p-variant='solid'][p-color='brand']:disabled {
@@ -138,8 +139,6 @@ button[p-variant='solid'][p-color='brand']:disabled {
 /* solid accent */
 
 button[p-variant='solid'][p-color='accent'] {
-  background-color: var(--p-btn-accent-color);
-  color: var(--p-btn-accent-text);
 }
 
 button[p-variant='solid'][p-color='accent']:hover {
@@ -159,8 +158,9 @@ button[p-variant='solid'][p-color='accent']:disabled {
 }
 
 button[p-variant='outline'][p-color='brand'] {
-  border-color: var(--p-btn-brand-color);
-  color: var(--p-btn-brand-text);
+  border-color: var(--p-brand);
+  border-width: 2px;
+  color: var(--p-brand);
 }
 
 button[p-variant='outline'][p-color='brand']:hover {

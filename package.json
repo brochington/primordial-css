@@ -2,9 +2,10 @@
   "name": "primordial-css",
   "version": "0.0.2",
   "description": "HTML element only css",
-  "main": "dist/primordial.css",
+  "main": "dist/primordial.js",
   "style": "dist/primordial.css",
   "files": [
+    "dist/primordial.js",
     "dist/primordial.css"
   ],
   "scripts": {
@@ -27,6 +28,7 @@
     "@brochington/horizon": "0.1.22",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.1",
     "chroma-js": "^2.1.2",
+    "lodash": "^4.17.21",
     "postcss-preset-env": "^6.7.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
