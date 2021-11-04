@@ -69,39 +69,36 @@ function updateBrandContrast() {
   );
 }
 
-function setGrayScale() {
+function setShades(colorName: string, count = 10) {
   const computedStyle = getComputedStyle(document.documentElement);
-  const grayscaleStart = computedStyle.getPropertyValue('--p-grayscale-start');
-  const grayscaleEnd = computedStyle.getPropertyValue('--p-grayscale-end');
+  const scaleStart = computedStyle.getPropertyValue(`--p-${colorName}-shades-start`);
+  const scaleEnd = computedStyle.getPropertyValue(`--p-${colorName}-shades-end`);
 
-  const gsStart = chroma(prepareHSL(grayscaleStart));
-  const gsEnd = chroma(prepareHSL(grayscaleEnd));
+  if (scaleStart && scaleEnd) {
+    const chromaStart = chroma(prepareHSL(scaleStart));
+    const chromaEnd = chroma(prepareHSL(scaleEnd));
+  
+    // const steps = chroma.scale([chromaStart, chromaEnd]).correctLightness().colors(count);
+    const steps = chroma.scale([chromaStart, chromaEnd]).gamma(0.5).colors(count);
+  
+    steps.map((s) => chroma(s)).forEach((s, i) => {
+      document.documentElement.style.setProperty(`--p-${colorName}-${i + 1}`, toHSL(s));
+      document.documentElement.style.setProperty(`--p-${colorName}-${i + 1}-text`, `hsl(0, 0%, calc((${s.hsl()[2] * 100}% - var(--contrastThreshold)) * -100))`);
+    });
+  }
 
-  const grays = chroma.scale([gsStart, gsEnd]).correctLightness().colors(10);
-
-  grays.map((c) => chroma(c)).forEach((c, i) => {
-    document.documentElement.style.setProperty(`--p-gray-${i}`, toHSL(c));
-    document.documentElement.style.setProperty(`--p-gray-${i}-text`, `hsl(0, 0%, calc((${c.hsl()[2] * 100}% - var(--contrastThreshold)) * -100))`);
-  });
 }
 
 window.addEventListener('DOMContentLoaded', () => {
-  setGrayScale();
+  setShades('base');
   updateBrandContrast();
 
   let obs = new MutationObserver((mutations, obs) => {
     obs.disconnect();
     console.time('updateBrandContrast');
     updateBrandContrast();
-    setGrayScale();
+    setShades('base');
     console.timeEnd('updateBrandContrast');
-    // console.log('mutations', mutations);
-    // mutations.forEach((mutation) => {
-    //   if (mutation.attributeName === 'style') {
-    //     // obs.disconnect(); // disconnect observer to prevent infinite loop
-    //     updateBrandContrast();
-    //   }
-    // });
 
     obs.observe(document.documentElement, obsConfig);
   });

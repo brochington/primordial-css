@@ -3,6 +3,8 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const RemoveEmptyScriptsPlugin = require('webpack-remove-empty-scripts');
 const postcssPresetEnv = require('postcss-preset-env');
 
+console.log("cwd: ", process.cwd());
+
 const babelLoaderConfig = {
   loader: 'babel-loader',
   options: {
@@ -31,7 +33,10 @@ module.exports = {
     path: path.join(process.cwd(), 'dist'),
     clean: true,
   },
-  mode: 'production',
+  mode: 'development',
+  // mode: 'production',
+  // devtool: 'source-map',
+  devtool: 'eval-source-map',
   module: {
     rules: [{
       test: /\.ts(x?)$/,

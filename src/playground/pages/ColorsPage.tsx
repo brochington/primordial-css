@@ -9,8 +9,6 @@ type ColorTileProps = {
 const ColorTile: FC<ColorTileProps> = (props: ColorTileProps) => {
   const { name, num } = props;
 
-  console.log('a');
-
   const numStr = isNumber(num) ? `-${num}` : '';
 
   return (
@@ -60,6 +58,17 @@ const ColorsPage: FC<Props> = (props: Props) => {
         <ColorGrid>
           <ColorTile name="brand" />
           <ColorTile name="accent" />
+          <ColorTile name="aux-1" />
+          <ColorTile name="aux-2" />
+          <ColorTile name="aux-3" />
+        </ColorGrid>
+
+        <h3>Topical</h3>
+        <ColorGrid>
+          <ColorTile name="success" />
+          <ColorTile name="danger" />
+          <ColorTile name="info" />
+          <ColorTile name="warning" />
         </ColorGrid>
 
         <h3>Text</h3>
@@ -78,16 +87,16 @@ const ColorsPage: FC<Props> = (props: Props) => {
 
         <h3>Grays</h3>
         <ColorGrid>
-          <ColorTile name="gray" num={0} />
-          <ColorTile name="gray" num={1} />
-          <ColorTile name="gray" num={2} />
-          <ColorTile name="gray" num={3} />
-          <ColorTile name="gray" num={4} />
-          <ColorTile name="gray" num={5} />
-          <ColorTile name="gray" num={6} />
-          <ColorTile name="gray" num={7} />
-          <ColorTile name="gray" num={8} />
-          <ColorTile name="gray" num={9} />
+          <ColorTile name="base" num={1} />
+          <ColorTile name="base" num={2} />
+          <ColorTile name="base" num={3} />
+          <ColorTile name="base" num={4} />
+          <ColorTile name="base" num={5} />
+          <ColorTile name="base" num={6} />
+          <ColorTile name="base" num={7} />
+          <ColorTile name="base" num={8} />
+          <ColorTile name="base" num={9} />
+          <ColorTile name="base" num={10} />
         </ColorGrid>
 
         <h3>Jewel</h3>
