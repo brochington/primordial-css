@@ -15,7 +15,7 @@
   --p-shades-hue: 173;
 
   /* Base */
-  --p-base-hue: 0;
+  --p-base-hue: 210;
   --p-base-saturation: 0%;
   --p-base-lightness: 70%;
   --p-base: hsl(var(--p-base-hue) var(--p-base-saturation) var(--p-base-lightness));
@@ -125,6 +125,10 @@
   --p-warning-saturation-light: 90%;
   --p-warning-lightness-light: 37%;
 
+  /* brand band test */
+  --p-brand-1: hsl(var(--p-brand-hue) calc(var(--p-brand-saturation) - 85%) calc(var(--p-brand-lightness) - 25%));
+  --p-brand-4: hsl(var(--p-brand-hue) calc(var(--p-brand-saturation) - 8%) calc(var(--p-brand-lightness) - 5%));
+
 
   --p-brand-dynamic-light: hsl(
     var(--p-brand-hue) var(--p-brand-saturation) var(--p-brand-lightness)
@@ -176,8 +180,8 @@
       calc(var(--p-brand-lightness) / 1.5)
   );
   --p-accent-dynamic-dark: hsl(var(--p-accent-hue) calc(var(--p-accent-saturation) / 2) calc(var(--p-accent-lightness) / 1.5));
-  --p-base-shades-start-dark: hsl(var(--p-base-hue), 90%, 90%);
-  --p-base-shades-end-dark: hsl(var(--p-base-hue), 10%, 0%);
+  --p-base-shades-start-dark: hsl(var(--p-base-hue), 2%, 90%);
+  --p-base-shades-end-dark: hsl(var(--p-base-hue), 2%, 0%);
   --p-text-1-dark: hsl(var(--p-brand-hue) 15% 85%);
   --p-text-2-dark: hsl(var(--p-brand-hue) 5% 65%);
   --p-text-invert-dark: hsl(var(--p-brand-hue) var(--p-brand-saturation) 10%);
@@ -221,8 +225,8 @@
       calc(var(--p-brand-lightness) / 1.25)
   );
   --p-accent-dynamic-dim: hsl(var(--p-accent-hue) calc(var(--p-accent-saturation) / 1.25) calc(var(--p-accent-lightness) / 1.25));
-  --p-base-shades-start-dim: hsl(var(--p-base-hue), 80%, 80%);
-  --p-base-shades-end-dim: hsl(var(--p-base-hue), 30%, 10%);
+  --p-base-shades-start-dim: hsl(var(--p-base-hue), 20%, 90%);
+  --p-base-shades-end-dim: hsl(var(--p-base-hue), 20%, 0%);
   --p-brand-dim: hsl(var(--p-brand-hue) 75% 55%);
   --p-text-1-dim: hsl(var(--p-brand-hue) 15% 75%);
   --p-text-2-dim: hsl(var(--p-brand-hue) 10% 61%);
@@ -472,8 +476,8 @@
 
   --p-brand-dynamic: var(--p-brand-dim);
   --p-accent-dynamic: var(--p-accent-dim);
-  --p-base-shades-start: var(--p-base-shades-start-shades-dim);
-  --p-base-shades-end: var(--p-base-shades-end-shades-dim);
+  --p-base-shades-start: var(--p-base-shades-start-dim);
+  --p-base-shades-end: var(--p-base-shades-end-dim);
   --p-text-1: var(--p-text-1-dim);
   --p-text-2: var(--p-text-2-dim);
   --p-text-invert: var(--p-text-invert-dim);

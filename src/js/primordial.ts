@@ -44,30 +44,30 @@ function toHSL(color: chroma.Color) {
 //   return hslPartsToString(chroma(brandRGB).hsl());
 // }
 
-function getHighContrastColor(customProp: string) {
-  const computedStyle = getComputedStyle(document.documentElement);
-  const customPropVal = computedStyle.getPropertyValue(customProp);
-  const colorStr = customPropVal.includes('hsl')
-    ? prepareHSL(customPropVal)
-    : customPropVal;
-  const color = chroma(colorStr);
-  const hue = color.hsl()[0];
-  const lightVersion = chroma.hsl(hue, 0.6, 0.9);
-  const darkVersion = chroma.hsl(hue, 0.1, 0.1);
-  const lightContrast = chroma.contrast(color, lightVersion);
-  const darkContrast = chroma.contrast(color, darkVersion);
+// function getHighContrastColor(customProp: string) {
+//   const computedStyle = getComputedStyle(document.documentElement);
+//   const customPropVal = computedStyle.getPropertyValue(customProp);
+//   const colorStr = customPropVal.includes('hsl')
+//     ? prepareHSL(customPropVal)
+//     : customPropVal;
+//   const color = chroma(colorStr);
+//   const hue = color.hsl()[0];
+//   const lightVersion = chroma.hsl(hue, 0.6, 0.9);
+//   const darkVersion = chroma.hsl(hue, 0.1, 0.1);
+//   const lightContrast = chroma.contrast(color, lightVersion);
+//   const darkContrast = chroma.contrast(color, darkVersion);
 
-  return lightContrast > darkContrast ? lightVersion : darkVersion;
-}
+//   return lightContrast > darkContrast ? lightVersion : darkVersion;
+// }
 
-function updateBrandContrast() {
-  const highContrastColor = getHighContrastColor('--p-brand');
+// function updateBrandContrast() {
+//   const highContrastColor = getHighContrastColor('--p-brand');
 
-  document.documentElement.style.setProperty(
-    '--p-brand-contrast',
-    toHSL(highContrastColor)
-  );
-}
+//   document.documentElement.style.setProperty(
+//     '--p-brand-contrast',
+//     toHSL(highContrastColor)
+//   );
+// }
 
 function setShades(colorName: string, count = 10) {
   const computedStyle = getComputedStyle(document.documentElement);
@@ -90,15 +90,12 @@ function setShades(colorName: string, count = 10) {
 }
 
 window.addEventListener('DOMContentLoaded', () => {
-  // setShades('base');
-  // updateBrandContrast();
+  setShades('base');
 
   let obs = new MutationObserver((mutations, obs) => {
     obs.disconnect();
-    console.time('updateBrandContrast');
-    // updateBrandContrast();
-    // setShades('base');
-    console.timeEnd('updateBrandContrast');
+
+    setShades('base');
 
     obs.observe(document.documentElement, obsConfig);
   });

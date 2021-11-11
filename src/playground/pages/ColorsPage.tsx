@@ -26,6 +26,29 @@ const ColorTile: FC<ColorTileProps> = (props: ColorTileProps) => {
   );
 };
 
+type ColorBandProps = {
+  name: string;
+};
+
+const ColorBand: FC<ColorBandProps> = (props: ColorBandProps) => {
+  const { name } = props;
+
+  return (
+    <ColorGrid>
+    <ColorTile name={`${name}-1`} />
+    <ColorTile name={`${name}-2`} />
+    <ColorTile name={`${name}-3`} />
+    <ColorTile name={`${name}-4`} />
+    <ColorTile name={`${name}-5`} />
+    <ColorTile name={`${name}-6`} />
+    <ColorTile name={`${name}-7`} />
+    <ColorTile name={`${name}-8`} />
+    <ColorTile name={`${name}-9`} />
+  </ColorGrid>
+  );
+};
+
+
 type ColorGridProps = PropsWithChildren<{}>;
 
 const ColorGrid: FC<ColorGridProps> = (props: ColorGridProps) => {
@@ -55,6 +78,7 @@ const ColorsPage: FC<Props> = (props: Props) => {
       <h1>Colors</h1>
       <div>
         <h3>Brand</h3>
+        <ColorBand name="brand" />
         <ColorGrid>
           <ColorTile name="brand" />
           <ColorTile name="accent" />
