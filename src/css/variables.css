@@ -98,7 +98,7 @@ Neutral + Shades + a tone
   --p-accent-text: hsl(0, 0%, var(--p-accent-switch));
 
   /* Auxiliary */
-  --p-aux-1-hue: calc(var(--p-brand-hue) - 31);
+  --p-aux-1-hue: calc(var(--p-brand-hue) - 30);
   /* --p-aux-1-hue: 173; */
   --p-aux-1-saturation: 60%;
   --p-aux-1-lightness: 50%;
@@ -107,7 +107,7 @@ Neutral + Shades + a tone
   --p-aux-1-text: hsl(0, 0%, var(--p-aux-1-switch));
 
   /* --p-aux-2-hue: 130; */
-  --p-aux-2-hue: calc(var(--p-brand-hue) + 31);
+  --p-aux-2-hue: calc(var(--p-brand-hue) + 30);
   --p-aux-2-saturation: 60%;
   --p-aux-2-lightness: 50%;
   --p-aux-2: hsl(var(--p-aux-2-hue) var(--p-aux-2-saturation) var(--p-aux-2-lightness));
@@ -115,8 +115,8 @@ Neutral + Shades + a tone
   --p-aux-2-text: hsl(0, 0%, var(--p-aux-2-switch));
 
   /* --p-aux-3-hue: 30; */
-  --p-aux-3-hue: calc(var(--p-brand-hue) + 69);
-  --p-aux-3-saturation: 60%;
+  --p-aux-3-hue: calc(var(--p-brand-hue) + 150);
+  --p-aux-3-saturation: 80%;
   --p-aux-3-lightness: 50%;
   --p-aux-3: hsl(var(--p-aux-3-hue) var(--p-aux-3-saturation) var(--p-aux-3-lightness));
   --p-aux-3-switch: calc((var(--p-aux-3-lightness) - var(--contrastThreshold)) * -100);
