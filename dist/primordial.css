@@ -1,6 +1,493 @@
 /*!***************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./src/css/variables.css ***!
   \***************************************************************************************************************************************************************************/
+:root {
+  /* Typography */
+  --p-font-family-1: initial;
+  --p-font-family-2: initial;
+  --p-font-family-3: initial;
+  --p-font-family-4: initial;
+
+  /* Contrast */
+  --contrastThreshold: 60%;
+  
+  /* Shades */
+  --p-shades-hue: 173;
+
+  /* Base */
+  --p-base-hue: 0;
+  --p-base-saturation: 0%;
+  --p-base-lightness: 70%;
+  --p-base: hsl(var(--p-base-hue) var(--p-base-saturation) var(--p-base-lightness));
+  --p-base-switch: calc((var(--p-base-lightness) - var(--contrastThreshold)) * -100);
+  --p-base-text: hsl(0, 0%, var(--p-base-switch));
+  
+  /* Brand */
+  --p-brand-hue: 177;
+  --p-brand-saturation: 60%;
+  --p-brand-lightness: 50%;
+  --p-brand: hsl(var(--p-brand-hue) var(--p-brand-saturation) var(--p-brand-lightness));
+  --p-brand-switch: calc((var(--p-brand-lightness) - var(--contrastThreshold)) * -100);
+  --p-brand-text: hsl(0, 0%, var(--p-brand-switch));
+
+  /* Accent */
+  --p-accent-hue: calc(var(--p-brand-hue) + 100);
+  --p-accent-saturation: 60%;
+  --p-accent-lightness: 50%;
+  --p-accent: hsl(var(--p-accent-hue) var(--p-accent-saturation) var(--p-accent-lightness));
+  --p-accent-switch: calc((var(--p-accent-lightness) - var(--contrastThreshold)) * -100);
+  --p-accent-text: hsl(0, 0%, var(--p-accent-switch));
+
+  /* Auxiliary */
+  --p-aux-1-hue: calc(var(--p-brand-hue) - 30);
+  /* --p-aux-1-hue: 173; */
+  --p-aux-1-saturation: 60%;
+  --p-aux-1-lightness: 50%;
+  --p-aux-1: hsl(var(--p-aux-1-hue) var(--p-aux-1-saturation) var(--p-aux-1-lightness));
+  --p-aux-1-switch: calc((var(--p-aux-1-lightness) - var(--contrastThreshold)) * -100);
+  --p-aux-1-text: hsl(0, 0%, var(--p-aux-1-switch));
+
+  /* --p-aux-2-hue: 130; */
+  --p-aux-2-hue: calc(var(--p-brand-hue) + 30);
+  --p-aux-2-saturation: 60%;
+  --p-aux-2-lightness: 50%;
+  --p-aux-2: hsl(var(--p-aux-2-hue) var(--p-aux-2-saturation) var(--p-aux-2-lightness));
+  --p-aux-2-switch: calc((var(--p-aux-2-lightness) - var(--contrastThreshold)) * -100);
+  --p-aux-2-text: hsl(0, 0%, var(--p-aux-2-switch));
+
+  /* --p-aux-3-hue: 30; */
+  --p-aux-3-hue: calc(var(--p-brand-hue) + 150);
+  --p-aux-3-saturation: 80%;
+  --p-aux-3-lightness: 50%;
+  --p-aux-3: hsl(var(--p-aux-3-hue) var(--p-aux-3-saturation) var(--p-aux-3-lightness));
+  --p-aux-3-switch: calc((var(--p-aux-3-lightness) - var(--contrastThreshold)) * -100);
+  --p-aux-3-text: hsl(0, 0%, var(--p-aux-3-switch));
+
+  /* Topical */
+
+  --p-success-hue: 136;
+  --p-success-saturation: 70%;
+  --p-success-lightness: 40%;
+  --p-success: hsl(var(--p-success-hue) var(--p-success-saturation) var(--p-success-lightness));
+  --p-success-switch: calc((var(--p-success-lightness) - var(--contrastThreshold)) * -100);
+  --p-success-text: hsl(0, 0%, var(--p-success-switch));
+
+  --p-danger-hue: 347;
+  --p-danger-saturation: 70%; /* 80% */
+  --p-danger-lightness: 40%; /* 60% */
+  --p-danger: hsl(var(--p-danger-hue) var(--p-danger-saturation) var(--p-danger-lightness));
+  --p-danger-switch: calc((var(--p-danger-lightness) - var(--contrastThreshold)) * -100);
+  --p-danger-text: hsl(0, 0%, var(--p-danger-switch));
+
+  --p-info-hue: 210;
+  --p-info-saturation: 70%;
+  --p-info-lightness: 40%;
+  --p-info: hsl(var(--p-info-hue) var(--p-info-saturation) var(--p-info-lightness));
+  --p-info-switch: calc((var(--p-info-lightness) - var(--contrastThreshold)) * -100);
+  --p-info-text: hsl(0, 0%, var(--p-info-switch));
+
+  --p-warning-hue: 40;
+  /* --p-warning-hue: 31; */
+  --p-warning-saturation: 70%;
+  --p-warning-lightness: 40%;
+  --p-warning: hsl(var(--p-warning-hue) var(--p-warning-saturation) var(--p-warning-lightness));
+  --p-warning-switch: calc((var(--p-warning-lightness) - var(--contrastThreshold)) * -100);
+  --p-warning-text: hsl(0, 0%, var(--p-warning-switch));
+
+
+  
+  /* light */
+
+  --p-brand-saturation-light: 90%;
+  --p-brand-lightness-light: 27%;
+
+  --p-accent-saturation-light: 70%;
+  --p-accent-lightness-light: 33%;
+
+  --p-aux-1-saturation-light: 80%;
+  --p-aux-1-lightness-light: 27%;
+
+  --p-aux-2-saturation-light: 70%;
+  --p-aux-2-lightness-light: 33%;
+
+  --p-aux-3-saturation-light: 70%;
+  --p-aux-3-lightness-light: 33%;
+
+  --p-success-saturation-light: 83%;
+  --p-success-lightness-light: 27%;
+
+  --p-danger-saturation-light: 70%;
+  --p-danger-lightness-light: 33%;
+
+  --p-info-saturation-light: 70%;
+  --p-info-lightness-light: 33%;
+
+  --p-warning-saturation-light: 90%;
+  --p-warning-lightness-light: 37%;
+
+
+  --p-brand-dynamic-light: hsl(
+    var(--p-brand-hue) var(--p-brand-saturation) var(--p-brand-lightness)
+  );
+  --p-accent-dynamic-light: hsl(var(--p-accent-hue) var(--p-accent-saturation) var(--p-accent-lightness));
+  --p-base-shades-start-light: hsl(var(--p-base-hue), 0%, 0%);
+  --p-base-shades-end-light: hsl(var(--p-base-hue), 0%, 98%);
+  --p-text-1-light: hsl(var(--p-brand-hue) var(--p-brand-saturation) 10%);
+  --p-text-2-light: hsl(var(--p-brand-hue) 30% 30%);
+  --p-text-invert-light: hsl(var(--p-brand-hue) var(--p-brand-saturation) 90%);
+  --p-surface-1-light: hsl(var(--p-brand-hue) 25% 90%);
+  --p-surface-2-light: hsl(var(--p-brand-hue) 20% 99%);
+  --p-surface-3-light: hsl(var(--p-brand-hue) 20% 92%);
+  --p-surface-4-light: hsl(var(--p-brand-hue) 20% 85%);
+  --p-surface-shadow-light: var(--p-brand-hue) 10% 20%;
+  --p-shadow-strength-light: 0.02;
+
+  /* dark */
+
+  --p-brand-saturation-dark: 80%;
+  --p-brand-lightness-dark: 63%;
+
+  --p-accent-saturation-dark: 80%;
+  --p-accent-lightness-dark: 63%;
+
+  --p-aux-1-saturation-dark: 80%;
+  --p-aux-1-lightness-dark: 63%;
+
+  --p-aux-2-saturation-dark: 80%;
+  --p-aux-2-lightness-dark: 63%;
+
+  --p-aux-3-saturation-dark: 80%;
+  --p-aux-3-lightness-dark: 63%;
+
+  --p-success-saturation-dark: 80%;
+  --p-success-lightness-dark: 63%;
+
+  --p-danger-saturation-dark: 80%;
+  --p-danger-lightness-dark: 63%;
+
+  --p-info-saturation-dark: 80%;
+  --p-info-lightness-dark: 63%;
+
+  --p-warning-saturation-dark: 80%;
+  --p-warning-lightness-dark: 63%;
+
+  --p-brand-dynamic-dark: hsl(
+    var(--p-brand-hue) calc(var(--p-brand-saturation) / 2)
+      calc(var(--p-brand-lightness) / 1.5)
+  );
+  --p-accent-dynamic-dark: hsl(var(--p-accent-hue) calc(var(--p-accent-saturation) / 2) calc(var(--p-accent-lightness) / 1.5));
+  --p-base-shades-start-dark: hsl(var(--p-base-hue), 90%, 90%);
+  --p-base-shades-end-dark: hsl(var(--p-base-hue), 10%, 0%);
+  --p-text-1-dark: hsl(var(--p-brand-hue) 15% 85%);
+  --p-text-2-dark: hsl(var(--p-brand-hue) 5% 65%);
+  --p-text-invert-dark: hsl(var(--p-brand-hue) var(--p-brand-saturation) 10%);
+  --p-surface-1-dark: hsl(var(--p-brand-hue) 10% 10%);
+  --p-surface-2-dark: hsl(var(--p-brand-hue) 10% 15%);
+  --p-surface-3-dark: hsl(var(--p-brand-hue) 5% 20%);
+  --p-surface-4-dark: hsl(var(--p-brand-hue) 5% 25%);
+  --p-surface-shadow-dark: var(--p-brand-hue) 50% 3%;
+  --p-shadow-strength-dark: 0.8;
+
+  /* dim */
+  --p-brand-saturation-dim: 75%;
+  --p-brand-lightness-dim: 55%;
+
+  --p-accent-saturation-dim: 75%;
+  --p-accent-lightness-dim: 55%;
+
+  --p-aux-1-saturation-dim: 75%;
+  --p-aux-1-lightness-dim: 55%;
+
+  --p-aux-2-saturation-dim: 75%;
+  --p-aux-2-lightness-dim: 55%;
+
+  --p-aux-3-saturation-dim: 75%;
+  --p-aux-3-lightness-dim: 55%;
+
+  --p-success-saturation-dim: 75%;
+  --p-success-lightness-dim: 55%;
+
+  --p-danger-saturation-dim: 75%;
+  --p-danger-lightness-dim: 55%;
+
+  --p-info-saturation-dim: 75%;
+  --p-info-lightness-dim: 55%;
+
+  --p-warning-saturation-dim: 75%;
+  --p-warning-lightness-dim: 55%;
+
+  --p-brand-dynamic-dim: hsl(
+    var(--p-brand-hue) calc(var(--p-brand-saturation) / 1.25)
+      calc(var(--p-brand-lightness) / 1.25)
+  );
+  --p-accent-dynamic-dim: hsl(var(--p-accent-hue) calc(var(--p-accent-saturation) / 1.25) calc(var(--p-accent-lightness) / 1.25));
+  --p-base-shades-start-dim: hsl(var(--p-base-hue), 80%, 80%);
+  --p-base-shades-end-dim: hsl(var(--p-base-hue), 30%, 10%);
+  --p-brand-dim: hsl(var(--p-brand-hue) 75% 55%);
+  --p-text-1-dim: hsl(var(--p-brand-hue) 15% 75%);
+  --p-text-2-dim: hsl(var(--p-brand-hue) 10% 61%);
+  --p-text-invert-dim: hsl(var(--p-brand-hue) var(--p-brand-saturation) 10%);
+  --p-surface-1-dim: hsl(var(--p-brand-hue) 10% 20%);
+  --p-surface-2-dim: hsl(var(--p-brand-hue) 10% 25%);
+  --p-surface-3-dim: hsl(var(--p-brand-hue) 5% 30%);
+  --p-surface-4-dim: hsl(var(--p-brand-hue) 5% 35%);
+  --p-surface-shadow-dim: var(--p-brand-hue) 30% 13%;
+  --p-shadow-strength-dim: 0.2;
+
+  color-scheme: light;
+
+  --p-brand-saturation: var(--p-brand-saturation-light);
+  --p-brand-lightness: var(--p-brand-lightness-light);
+
+  --p-accent-saturation: var(--p-accent-saturation-light);
+  --p-accent-lightness: var(--p-accent-lightness-light);
+
+  --p-aux-1-saturation: var(--p-aux-1-saturation-light);
+  --p-aux-1-lightness: var(--p-aux-1-lightness-light);
+
+  --p-aux-2-saturation: var(--p-aux-2-saturation-light);
+  --p-aux-2-lightness: var(--p-aux-2-lightness-light);
+
+  --p-aux-3-saturation: var(--p-aux-3-saturation-light);
+  --p-aux-3-lightness: var(--p-aux-3-lightness-light);
+
+  --p-success-saturation: var(--p-success-saturation-light);
+  --p-success-lightness: var(--p-success-lightness-light);
+
+  --p-danger-saturation: var(--p-danger-saturation-light);
+  --p-danger-lightness: var(--p-danger-lightness-light);
+
+  --p-info-saturation: var(--p-info-saturation-light);
+  --p-info-lightness: var(--p-info-lightness-light);
+
+  --p-warning-saturation: var(--p-warning-saturation-light);
+  --p-warning-lightness: var(--p-warning-lightness-light);
+
+  /* set defaults */
+  --p-brand-dynamic: var(--p-brand-light);
+  --p-accent-dynamic: var(--p-accent-light);
+  --p-base-shades-start: var(--p-base-start-light);
+  --p-base-shades-end: var(--p-base-end-light);
+  --p-text-1: var(--p-text-1-light);
+  --p-text-2: var(--p-text-2-light);
+  --p-text-contrast: var(--p-text-1); /* Don't know if this is a good default */
+  --p-text-invert: var(--p-text-invert-light);
+  --p-surface-1: var(--p-surface-1-light);
+  --p-surface-2: var(--p-surface-2-light);
+  --p-surface-3: var(--p-surface-3-light);
+  --p-surface-4: var(--p-surface-4-light);
+  --p-surface-shadow: var(--p-surface-shadow-light);
+  --p-shadow-strength: var(--p-shadow-strength-light);
+}
+
+@media (color-index: 48) {
+  :root {
+    color-scheme: dark;
+
+    --p-brand-saturation: var(--p-brand-saturation-dark);
+    --p-brand-lightness: var(--p-brand-lightness-dark);
+
+    --p-accent-saturation: var(--p-accent-saturation-dark);
+    --p-accent-lightness: var(--p-accent-lightness-dark);
+  
+    --p-aux-1-saturation: var(--p-aux-1-saturation-dark);
+    --p-aux-1-lightness: var(--p-aux-1-lightness-dark);
+  
+    --p-aux-2-saturation: var(--p-aux-2-saturation-dark);
+    --p-aux-2-lightness: var(--p-aux-2-lightness-dark);
+  
+    --p-aux-3-saturation: var(--p-aux-3-saturation-dark);
+    --p-aux-3-lightness: var(--p-aux-3-lightness-dark);
+
+    --p-success-saturation: var(--p-success-saturation-dark);
+    --p-success-lightness: var(--p-success-lightness-dark);
+
+    --p-danger-saturation: var(--p-danger-saturation-dark);
+    --p-danger-lightness: var(--p-danger-lightness-dark);
+
+    --p-info-saturation: var(--p-info-saturation-dark);
+    --p-info-lightness: var(--p-info-lightness-dark);
+
+    --p-warning-saturation: var(--p-warning-saturation-dark);
+    --p-warning-lightness: var(--p-warning-lightness-dark);
+
+    --p-brand-dynamic: var(--p-brand-dark);
+    --p-accent-dynamic: var(--p-accent-dark);
+    --p-base-shades-start: var(--p-base-start-dark);
+    --p-base-shades-end: var(--p-base-end-dark);
+    --p-text-1: var(--p-text-1-dark);
+    --p-text-2: var(--p-text-2-dark);
+    --p-text-invert: var(--p-text-invert-dark);
+    --p-surface-1: var(--p-surface-1-dark);
+    --p-surface-2: var(--p-surface-2-dark);
+    --p-surface-3: var(--p-surface-3-dark);
+    --p-surface-4: var(--p-surface-4-dark);
+    --p-surface-shadow: var(--p-surface-shadow-dark);
+    --p-shadow-strength: var(--p-shadow-strength-dark);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+
+    --p-brand-saturation: var(--p-brand-saturation-dark);
+    --p-brand-lightness: var(--p-brand-lightness-dark);
+
+    --p-accent-saturation: var(--p-accent-saturation-dark);
+    --p-accent-lightness: var(--p-accent-lightness-dark);
+  
+    --p-aux-1-saturation: var(--p-aux-1-saturation-dark);
+    --p-aux-1-lightness: var(--p-aux-1-lightness-dark);
+  
+    --p-aux-2-saturation: var(--p-aux-2-saturation-dark);
+    --p-aux-2-lightness: var(--p-aux-2-lightness-dark);
+  
+    --p-aux-3-saturation: var(--p-aux-3-saturation-dark);
+    --p-aux-3-lightness: var(--p-aux-3-lightness-dark);
+
+    --p-success-saturation: var(--p-success-saturation-dark);
+    --p-success-lightness: var(--p-success-lightness-dark);
+
+    --p-danger-saturation: var(--p-danger-saturation-dark);
+    --p-danger-lightness: var(--p-danger-lightness-dark);
+
+    --p-info-saturation: var(--p-info-saturation-dark);
+    --p-info-lightness: var(--p-info-lightness-dark);
+
+    --p-warning-saturation: var(--p-warning-saturation-dark);
+    --p-warning-lightness: var(--p-warning-lightness-dark);
+
+    --p-brand-dynamic: var(--p-brand-dark);
+    --p-accent-dynamic: var(--p-accent-dark);
+    --p-base-shades-start: var(--p-base-start-dark);
+    --p-base-shades-end: var(--p-base-end-dark);
+    --p-text-1: var(--p-text-1-dark);
+    --p-text-2: var(--p-text-2-dark);
+    --p-text-invert: var(--p-text-invert-dark);
+    --p-surface-1: var(--p-surface-1-dark);
+    --p-surface-2: var(--p-surface-2-dark);
+    --p-surface-3: var(--p-surface-3-dark);
+    --p-surface-4: var(--p-surface-4-dark);
+    --p-surface-shadow: var(--p-surface-shadow-dark);
+    --p-shadow-strength: var(--p-shadow-strength-dark);
+  }
+}
+
+[color-scheme='light'] {
+  color-scheme: light;
+
+  --p-brand-saturation: var(--p-brand-saturation-light);
+  --p-brand-lightness: var(--p-brand-lightness-light);
+
+  --p-accent-saturation: var(--p-accent-saturation-light);
+  --p-accent-lightness: var(--p-accent-lightness-light);
+
+  --p-aux-1-saturation: var(--p-aux-1-saturation-light);
+  --p-aux-1-lightness: var(--p-aux-1-lightness-light);
+
+  --p-aux-2-saturation: var(--p-aux-2-saturation-light);
+  --p-aux-2-lightness: var(--p-aux-2-lightness-light);
+
+  --p-aux-3-saturation: var(--p-aux-3-saturation-light);
+  --p-aux-3-lightness: var(--p-aux-3-lightness-light);
+
+  --p-success-saturation: var(--p-success-saturation-light);
+  --p-success-lightness: var(--p-success-lightness-light);
+
+  --p-danger-saturation: var(--p-danger-saturation-light);
+  --p-danger-lightness: var(--p-danger-lightness-light);
+
+  --p-info-saturation: var(--p-info-saturation-light);
+  --p-info-lightness: var(--p-info-lightness-light);
+
+  --p-warning-saturation: var(--p-warning-saturation-light);
+  --p-warning-lightness: var(--p-warning-lightness-light);
+
+  --p-brand-dynamic: var(--p-brand-light);
+  --p-accent-dynamic: var(--p-accent-light);
+  --p-base-shades-start: var(--p-base-shades-start-light);
+  --p-base-shades-end: var(--p-base-shades-end-light);
+  --p-text-1: var(--p-text-1-light);
+  --p-text-2: var(--p-text-2-light);
+  --p-text-invert: var(--p-text-invert-light);
+  --p-surface-1: var(--p-surface-1-light);
+  --p-surface-2: var(--p-surface-2-light);
+  --p-surface-3: var(--p-surface-3-light);
+  --p-surface-4: var(--p-surface-4-light);
+  --p-surface-shadow: var(--p-surface-shadow-light);
+  --p-shadow-strength: var(--p-shadow-strength-light);
+}
+
+[color-scheme='dark'] {
+  color-scheme: dark;
+
+  --p-brand-saturation: var(--p-brand-saturation-dark);
+  --p-brand-lightness: var(--p-brand-lightness-dark);
+
+  --p-accent-saturation: var(--p-accent-saturation-dark);
+  --p-accent-lightness: var(--p-accent-lightness-dark);
+
+  --p-aux-1-saturation: var(--p-aux-1-saturation-dark);
+  --p-aux-1-lightness: var(--p-aux-1-lightness-dark);
+
+  --p-aux-2-saturation: var(--p-aux-2-saturation-dark);
+  --p-aux-2-lightness: var(--p-aux-2-lightness-dark);
+
+  --p-aux-3-saturation: var(--p-aux-3-saturation-dark);
+  --p-aux-3-lightness: var(--p-aux-3-lightness-dark);
+
+  --p-brand-dynamic: var(--p-brand-dark);
+  --p-accent-dynamic: var(--p-accent-dark);
+  --p-base-shades-start: var(--p-base-shades-start-dark);
+  --p-base-shades-end: var(--p-base-shades-end-dark);
+  --p-text-1: var(--p-text-1-dark);
+  --p-text-2: var(--p-text-2-dark);
+  --p-text-invert: var(--p-text-invert-dark);
+  --p-surface-1: var(--p-surface-1-dark);
+  --p-surface-2: var(--p-surface-2-dark);
+  --p-surface-3: var(--p-surface-3-dark);
+  --p-surface-4: var(--p-surface-4-dark);
+  --p-surface-shadow: var(--p-surface-shadow-dark);
+  --p-shadow-strength: var(--p-shadow-strength-dark);
+}
+
+[color-scheme='dim'] {
+  color-scheme: dark;
+
+  --p-brand-saturation: var(--p-brand-saturation-dim);
+  --p-brand-lightness: var(--p-brand-lightness-dim);
+
+  --p-accent-saturation: var(--p-accent-saturation-dim);
+  --p-accent-lightness: var(--p-accent-lightness-dim);
+
+  --p-aux-1-saturation: var(--p-aux-1-saturation-dim);
+  --p-aux-1-lightness: var(--p-aux-1-lightness-dim);
+
+  --p-aux-2-saturation: var(--p-aux-2-saturation-dim);
+  --p-aux-2-lightness: var(--p-aux-2-lightness-dim);
+
+  --p-aux-3-saturation: var(--p-aux-3-saturation-dim);
+  --p-aux-3-lightness: var(--p-aux-3-lightness-dim);
+
+  --p-brand-dynamic: var(--p-brand-dim);
+  --p-accent-dynamic: var(--p-accent-dim);
+  --p-base-shades-start: var(--p-base-shades-start-shades-dim);
+  --p-base-shades-end: var(--p-base-shades-end-shades-dim);
+  --p-text-1: var(--p-text-1-dim);
+  --p-text-2: var(--p-text-2-dim);
+  --p-text-invert: var(--p-text-invert-dim);
+  --p-surface-1: var(--p-surface-1-dim);
+  --p-surface-2: var(--p-surface-2-dim);
+  --p-surface-3: var(--p-surface-3-dim);
+  --p-surface-4: var(--p-surface-4-dim);
+  --p-surface-shadow: var(--p-surface-shadow-dim);
+  --p-shadow-strength: var(--p-shadow-strength-dim);
+}
+
+/*!***********************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./src/css/tones.css ***!
+  \***********************************************************************************************************************************************************************/
 /* https://github.com/argyleink/gui-challenges/blob/main/color-schemes/style.css */
 /* Colorizer: http://colorizer.org/ */
 /* https://css-tricks.com/switch-font-color-for-different-backgrounds-with-css/ */
@@ -62,100 +549,7 @@ HSL:
 Neutral + Shades + a tone
 */
 
-
 :root {
-  /* Typography */
-  --p-font-family-1: initial;
-  --p-font-family-2: initial;
-  --p-font-family-3: initial;
-  --p-font-family-4: initial;
-
-  /* Contrast */
-  --contrastThreshold: 60%;
-  
-  /* Shades */
-  --p-shades-hue: 173;
-
-  /* Base */
-  --p-base-hue: 0;
-  --p-base-saturation: 0%;
-  --p-base-lightness: 70%;
-  --p-base: hsl(var(--p-base-hue) var(--p-base-saturation) var(--p-base-lightness));
-  --p-base-switch: calc((var(--p-base-lightness) - var(--contrastThreshold)) * -100);
-  --p-base-text: hsl(0, 0%, var(--p-base-switch));
-  
-  /* Brand */
-  --p-brand-hue: 184;
-  --p-brand-saturation: 60%;
-  --p-brand-lightness: 50%;
-  --p-brand: hsl(var(--p-brand-hue) var(--p-brand-saturation) var(--p-brand-lightness));
-  --p-brand-switch: calc((var(--p-brand-lightness) - var(--contrastThreshold)) * -100);
-  --p-brand-text: hsl(0, 0%, var(--p-brand-switch));
-
-  /* Accent */
-  --p-accent-hue: calc(var(--p-brand-hue) + 100);
-  --p-accent-saturation: 60%;
-  --p-accent-lightness: 50%;
-  --p-accent: hsl(var(--p-accent-hue) var(--p-accent-saturation) var(--p-accent-lightness));
-  --p-accent-switch: calc((var(--p-accent-lightness) - var(--contrastThreshold)) * -100);
-  --p-accent-text: hsl(0, 0%, var(--p-accent-switch));
-
-  /* Auxiliary */
-  --p-aux-1-hue: calc(var(--p-brand-hue) - 30);
-  /* --p-aux-1-hue: 173; */
-  --p-aux-1-saturation: 60%;
-  --p-aux-1-lightness: 50%;
-  --p-aux-1: hsl(var(--p-aux-1-hue) var(--p-aux-1-saturation) var(--p-aux-1-lightness));
-  --p-aux-1-switch: calc((var(--p-aux-1-lightness) - var(--contrastThreshold)) * -100);
-  --p-aux-1-text: hsl(0, 0%, var(--p-aux-1-switch));
-
-  /* --p-aux-2-hue: 130; */
-  --p-aux-2-hue: calc(var(--p-brand-hue) + 30);
-  --p-aux-2-saturation: 60%;
-  --p-aux-2-lightness: 50%;
-  --p-aux-2: hsl(var(--p-aux-2-hue) var(--p-aux-2-saturation) var(--p-aux-2-lightness));
-  --p-aux-2-switch: calc((var(--p-aux-2-lightness) - var(--contrastThreshold)) * -100);
-  --p-aux-2-text: hsl(0, 0%, var(--p-aux-2-switch));
-
-  /* --p-aux-3-hue: 30; */
-  --p-aux-3-hue: calc(var(--p-brand-hue) + 150);
-  --p-aux-3-saturation: 80%;
-  --p-aux-3-lightness: 50%;
-  --p-aux-3: hsl(var(--p-aux-3-hue) var(--p-aux-3-saturation) var(--p-aux-3-lightness));
-  --p-aux-3-switch: calc((var(--p-aux-3-lightness) - var(--contrastThreshold)) * -100);
-  --p-aux-3-text: hsl(0, 0%, var(--p-aux-3-switch));
-
-  /* Topical */
-
-  --p-success-hue: 152;
-  --p-success-saturation: 60%;
-  --p-success-lightness: 50%;
-  --p-success: hsl(var(--p-success-hue) var(--p-success-saturation) var(--p-success-lightness));
-  --p-success-switch: calc((var(--p-success-lightness) - var(--contrastThreshold)) * -100);
-  --p-success-text: hsl(0, 0%, var(--p-success-switch));
-
-  --p-danger-hue: 354;
-  --p-danger-saturation: 60%;
-  --p-danger-lightness: 50%;
-  --p-danger: hsl(var(--p-danger-hue) var(--p-danger-saturation) var(--p-danger-lightness));
-  --p-danger-switch: calc((var(--p-danger-lightness) - var(--contrastThreshold)) * -100);
-  --p-danger-text: hsl(0, 0%, var(--p-danger-switch));
-
-  --p-info-hue: 190;
-  --p-info-saturation: 60%;
-  --p-info-lightness: 50%;
-  --p-info: hsl(var(--p-info-hue) var(--p-info-saturation) var(--p-info-lightness));
-  --p-info-switch: calc((var(--p-info-lightness) - var(--contrastThreshold)) * -100);
-  --p-info-text: hsl(0, 0%, var(--p-info-switch));
-
-  --p-warning-hue: 45;
-  --p-warning-saturation: 60%;
-  --p-warning-lightness: 50%;
-  --p-warning: hsl(var(--p-warning-hue) var(--p-warning-saturation) var(--p-warning-lightness));
-  --p-warning-switch: calc((var(--p-warning-lightness) - var(--contrastThreshold)) * -100);
-  --p-warning-text: hsl(0, 0%, var(--p-warning-switch));
-
-
   /* Tones */
   --p-hue-leap: 37;
 
@@ -284,172 +678,7 @@ Neutral + Shades + a tone
   --p-neon-8-text: hsl(0, 0%, var(--p-neon-switch));
   --p-neon-9-text: hsl(0, 0%, var(--p-neon-switch));
 
-  /* light */
-  --p-brand-dynamic-light: hsl(
-    var(--p-brand-hue) var(--p-brand-saturation) var(--p-brand-lightness)
-  );
-  --p-accent-dynamic-light: hsl(var(--p-accent-hue) var(--p-accent-saturation) var(--p-accent-lightness));
-  --p-base-shades-start-light: hsl(var(--p-base-hue), 0%, 0%);
-  --p-base-shades-end-light: hsl(var(--p-base-hue), 0%, 98%);
-  --p-text-1-light: hsl(var(--p-brand-hue) var(--p-brand-saturation) 10%);
-  --p-text-2-light: hsl(var(--p-brand-hue) 30% 30%);
-  --p-text-invert-light: hsl(var(--p-brand-hue) var(--p-brand-saturation) 90%);
-  --p-surface-1-light: hsl(var(--p-brand-hue) 25% 90%);
-  --p-surface-2-light: hsl(var(--p-brand-hue) 20% 99%);
-  --p-surface-3-light: hsl(var(--p-brand-hue) 20% 92%);
-  --p-surface-4-light: hsl(var(--p-brand-hue) 20% 85%);
-  --p-surface-shadow-light: var(--p-brand-hue) 10% 20%;
-  --p-shadow-strength-light: 0.02;
-
-  /* dark */
-  --p-brand-dynamic-dark: hsl(
-    var(--p-brand-hue) calc(var(--p-brand-saturation) / 2)
-      calc(var(--p-brand-lightness) / 1.5)
-  );
-  --p-accent-dynamic-dark: hsl(var(--p-accent-hue) calc(var(--p-accent-saturation) / 2) calc(var(--p-accent-lightness) / 1.5));
-  --p-base-shades-start-dark: hsl(var(--p-base-hue), 90%, 90%);
-  --p-base-shades-end-dark: hsl(var(--p-base-hue), 10%, 0%);
-  --p-text-1-dark: hsl(var(--p-brand-hue) 15% 85%);
-  --p-text-2-dark: hsl(var(--p-brand-hue) 5% 65%);
-  --p-text-invert-dark: hsl(var(--p-brand-hue) var(--p-brand-saturation) 10%);
-  --p-surface-1-dark: hsl(var(--p-brand-hue) 10% 10%);
-  --p-surface-2-dark: hsl(var(--p-brand-hue) 10% 15%);
-  --p-surface-3-dark: hsl(var(--p-brand-hue) 5% 20%);
-  --p-surface-4-dark: hsl(var(--p-brand-hue) 5% 25%);
-  --p-surface-shadow-dark: var(--p-brand-hue) 50% 3%;
-  --p-shadow-strength-dark: 0.8;
-
-  /* dim */
-  --p-brand-dynamic-dim: hsl(
-    var(--p-brand-hue) calc(var(--p-brand-saturation) / 1.25)
-      calc(var(--p-brand-lightness) / 1.25)
-  );
-  --p-accent-dynamic-dim: hsl(var(--p-accent-hue) calc(var(--p-accent-saturation) / 1.25) calc(var(--p-accent-lightness) / 1.25));
-  --p-base-shades-start-dim: hsl(var(--p-base-hue), 80%, 80%);
-  --p-base-shades-end-dim: hsl(var(--p-base-hue), 30%, 10%);
-  --p-text-1-dim: hsl(var(--p-brand-hue) 15% 75%);
-  --p-text-2-dim: hsl(var(--p-brand-hue) 10% 61%);
-  --p-text-invert-dim: hsl(var(--p-brand-hue) var(--p-brand-saturation) 10%);
-  --p-surface-1-dim: hsl(var(--p-brand-hue) 10% 20%);
-  --p-surface-2-dim: hsl(var(--p-brand-hue) 10% 25%);
-  --p-surface-3-dim: hsl(var(--p-brand-hue) 5% 30%);
-  --p-surface-4-dim: hsl(var(--p-brand-hue) 5% 35%);
-  --p-surface-shadow-dim: var(--p-brand-hue) 30% 13%;
-  --p-shadow-strength-dim: 0.2;
-
-  color-scheme: light;
-
-  /* set defaults */
-  --p-brand-dynamic: var(--p-brand-light);
-  --p-accent-dynamic: var(--p-accent-light);
-  --p-base-shades-start: var(--p-base-start-light);
-  --p-base-shades-end: var(--p-base-end-light);
-  --p-text-1: var(--p-text-1-light);
-  --p-text-2: var(--p-text-2-light);
-  --p-text-contrast: var(--p-text-1); /* Don't know if this is a good default */
-  --p-text-invert: var(--p-text-invert-light);
-  --p-surface-1: var(--p-surface-1-light);
-  --p-surface-2: var(--p-surface-2-light);
-  --p-surface-3: var(--p-surface-3-light);
-  --p-surface-4: var(--p-surface-4-light);
-  --p-surface-shadow: var(--p-surface-shadow-light);
-  --p-shadow-strength: var(--p-shadow-strength-light);
 }
-
-@media (color-index: 48) {
-  :root {
-    color-scheme: dark;
-
-    --p-brand-dynamic: var(--p-brand-dark);
-    --p-accent-dynamic: var(--p-accent-dark);
-    --p-base-shades-start: var(--p-base-start-dark);
-    --p-base-shades-end: var(--p-base-end-dark);
-    --p-text-1: var(--p-text-1-dark);
-    --p-text-2: var(--p-text-2-dark);
-    --p-text-invert: var(--p-text-invert-dark);
-    --p-surface-1: var(--p-surface-1-dark);
-    --p-surface-2: var(--p-surface-2-dark);
-    --p-surface-3: var(--p-surface-3-dark);
-    --p-surface-4: var(--p-surface-4-dark);
-    --p-surface-shadow: var(--p-surface-shadow-dark);
-    --p-shadow-strength: var(--p-shadow-strength-dark);
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    color-scheme: dark;
-
-    --p-brand-dynamic: var(--p-brand-dark);
-    --p-accent-dynamic: var(--p-accent-dark);
-    --p-base-shades-start: var(--p-base-start-dark);
-    --p-base-shades-end: var(--p-base-end-dark);
-    --p-text-1: var(--p-text-1-dark);
-    --p-text-2: var(--p-text-2-dark);
-    --p-text-invert: var(--p-text-invert-dark);
-    --p-surface-1: var(--p-surface-1-dark);
-    --p-surface-2: var(--p-surface-2-dark);
-    --p-surface-3: var(--p-surface-3-dark);
-    --p-surface-4: var(--p-surface-4-dark);
-    --p-surface-shadow: var(--p-surface-shadow-dark);
-    --p-shadow-strength: var(--p-shadow-strength-dark);
-  }
-}
-
-[color-scheme='light'] {
-  color-scheme: light;
-
-  --p-brand-dynamic: var(--p-brand-light);
-  --p-accent-dynamic: var(--p-accent-light);
-  --p-base-shades-start: var(--p-base-shades-start-light);
-  --p-base-shades-end: var(--p-base-shades-end-light);
-  --p-text-1: var(--p-text-1-light);
-  --p-text-2: var(--p-text-2-light);
-  --p-text-invert: var(--p-text-invert-light);
-  --p-surface-1: var(--p-surface-1-light);
-  --p-surface-2: var(--p-surface-2-light);
-  --p-surface-3: var(--p-surface-3-light);
-  --p-surface-4: var(--p-surface-4-light);
-  --p-surface-shadow: var(--p-surface-shadow-light);
-  --p-shadow-strength: var(--p-shadow-strength-light);
-}
-
-[color-scheme='dark'] {
-  color-scheme: dark;
-
-  --p-brand-dynamic: var(--p-brand-dark);
-  --p-accent-dynamic: var(--p-accent-dark);
-  --p-base-shades-start: var(--p-base-shades-start-dark);
-  --p-base-shades-end: var(--p-base-shades-end-dark);
-  --p-text-1: var(--p-text-1-dark);
-  --p-text-2: var(--p-text-2-dark);
-  --p-text-invert: var(--p-text-invert-dark);
-  --p-surface-1: var(--p-surface-1-dark);
-  --p-surface-2: var(--p-surface-2-dark);
-  --p-surface-3: var(--p-surface-3-dark);
-  --p-surface-4: var(--p-surface-4-dark);
-  --p-surface-shadow: var(--p-surface-shadow-dark);
-  --p-shadow-strength: var(--p-shadow-strength-dark);
-}
-
-[color-scheme='dim'] {
-  color-scheme: dark;
-
-  --p-brand-dynamic: var(--p-brand-dim);
-  --p-accent-dynamic: var(--p-accent-dim);
-  --p-base-shades-start: var(--p-base-shades-start-shades-dim);
-  --p-base-shades-end: var(--p-base-shades-end-shades-dim);
-  --p-text-1: var(--p-text-1-dim);
-  --p-text-2: var(--p-text-2-dim);
-  --p-text-invert: var(--p-text-invert-dim);
-  --p-surface-1: var(--p-surface-1-dim);
-  --p-surface-2: var(--p-surface-2-dim);
-  --p-surface-3: var(--p-surface-3-dim);
-  --p-surface-4: var(--p-surface-4-dim);
-  --p-surface-shadow: var(--p-surface-shadow-dim);
-  --p-shadow-strength: var(--p-shadow-strength-dim);
-}
-
 /*!**************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./src/css/elements.css ***!
   \**************************************************************************************************************************************************************************/
@@ -688,44 +917,9 @@ input[p-type="outline"]:focus {
 /*!************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./src/css/button.css ***!
   \************************************************************************************************************************************************************************/
-/* variants: solid outline ghost link neu */
-/* sizes: xs sm md lg xl */
-/* colors: brand accent */
-
 :root {
   --p-button-font-family: var(--p-font-family-1);
   --p-button-border-radius: 4px;
-
-  /* Variants */
-
-  /* solid variant */
-  /* --p-btn-solid-color: var(--p-text-1); */
-
-  /* outline variant */
-  /* --p-btn-fill-outline-color: var(--p-text-1); */
-
-  /* ghost variant */
-  /* --p-button-fill-ghost-color: var(--p-text-1); */
-
-  /* link variant */
-  /* --p-button-fill-link-color: var(--p-text-1); */
-
-  /* neu variant */
-  /* --p-button-fill-neu-color: var(--p-text-1); */
-
-  /* Colors /*
-
-  /* unstyled */
-  /* --p-btn-base-color: var(--p-btn-1);
-  --p-btn-base-text: var(--p-text-invert); */
-
-  /* brand */
-  /* --p-btn-brand-color: var(--p-brand);
-  --p-btn-brand-text: var(--p-brand-text); */
-
-  /* accent */
-  /* --p-btn-accent-color: var(--p-accent);
-  --p-btn-accent-text: var(--p-text-1); */
 }
 
 /* Button Sizing */
@@ -735,6 +929,7 @@ button {
   -moz-appearance: none;
   word-break: keep-all;
   outline: none;
+  outline-offset: 2px;
   border-radius: 4px;
   border-radius: var(--p-button-border-radius);
   border-style: solid;
@@ -746,7 +941,6 @@ button {
   font-family: var(--p-font-family-1);
   font-family: var(--p-button-font-family);
   font-weight: 600;
-  /* Default button size is "md" */
   font-size: 12px;
   line-height: 24px;
   padding: 7px 20px;
@@ -796,8 +990,8 @@ button[p-color="base"] {
   --p-local-color-saturation: var(--p-base-saturation);
   --p-local-color-lightness: var(--p-base-lightness);
   --p-local-color: var(--p-base);
-  --p-local-color-darker: hsl(calc(var(--p-base-hue) + 2), calc(var(--p-base-saturation) - 3%), calc(var(--p-base-lightness) - 7%));
-  --p-local-color-darkest: hsl(calc(var(--p-base-hue) + 4), calc(var(--p-base-saturation) - 6%), calc(var(--p-base-lightness) - 14%));
+  --p-local-color-darker: hsl(calc(var(--p-base-hue) + 2), calc(var(--p-base-saturation) - 3%), calc(var(--p-base-lightness) - 6%));
+  --p-local-color-darkest: hsl(calc(var(--p-base-hue) + 4), calc(var(--p-base-saturation) - 6%), calc(var(--p-base-lightness) - 10%));
   --p-local-color-opaque: hsla(var(--p-base-hue), var(--p-base-saturation), var(--p-base-lightness) 0.12);
   --p-local-color-opaque-1: hsla(var(--p-base-hue), var(--p-base-saturation), var(--p-base-lightness) 0.12);
   --p-local-color-opaque-2: hsla(var(--p-base-hue), var(--p-base-saturation), var(--p-base-lightness) 0.24);
@@ -809,8 +1003,8 @@ button[p-color="brand"] {
   --p-local-color-saturation: var(--p-brand-saturation);
   --p-local-color-lightness: var(--p-brand-lightness);
   --p-local-color: var(--p-brand);
-  --p-local-color-darker: hsl(calc(var(--p-brand-hue) + 2), calc(var(--p-brand-saturation) - 3%), calc(var(--p-brand-lightness) - 7%));
-  --p-local-color-darkest: hsl(calc(var(--p-brand-hue) + 2), calc(var(--p-brand-saturation) - 6%), calc(var(--p-brand-lightness) - 14%));
+  --p-local-color-darker: hsl(calc(var(--p-brand-hue) + 2), calc(var(--p-brand-saturation) - 3%), calc(var(--p-brand-lightness) - 6%));
+  --p-local-color-darkest: hsl(calc(var(--p-brand-hue) + 4), calc(var(--p-brand-saturation) - 6%), calc(var(--p-brand-lightness) - 10%));
   --p-local-color-opaque: hsla(var(--p-brand-hue), var(--p-brand-saturation), var(--p-brand-lightness), 0.12);
   --p-local-color-opaque-1: hsla(var(--p-brand-hue), var(--p-brand-saturation), var(--p-brand-lightness), 0.12);
   --p-local-color-opaque-2: hsla(var(--p-brand-hue), var(--p-brand-saturation), var(--p-brand-lightness), 0.24);
@@ -822,8 +1016,8 @@ button[p-color="accent"] {
   --p-local-color-saturation: var(--p-accent-saturation);
   --p-local-color-lightness: var(--p-accent-lightness);
   --p-local-color: var(--p-accent);
-  --p-local-color-darker: hsl(calc(var(--p-accent-hue) + 2), calc(var(--p-accent-saturation) - 3%), calc(var(--p-accent-lightness) - 7%));
-  --p-local-color-darkest: hsl(calc(var(--p-accent-hue) + 4), calc(var(--p-accent-saturation) - 6%), calc(var(--p-accent-lightness) - 14%));
+  --p-local-color-darker: hsl(calc(var(--p-accent-hue) + 2), calc(var(--p-accent-saturation) - 3%), calc(var(--p-accent-lightness) - 6%));
+  --p-local-color-darkest: hsl(calc(var(--p-accent-hue) + 4), calc(var(--p-accent-saturation) - 6%), calc(var(--p-accent-lightness) - 10%));
   --p-local-color-opaque: hsla(var(--p-accent-hue), var(--p-accent-saturation), var(--p-accent-lightness), 0.12);
   --p-local-color-opaque-1: hsla(var(--p-accent-hue), var(--p-accent-saturation), var(--p-accent-lightness), 0.12);
   --p-local-color-opaque-2: hsla(var(--p-accent-hue), var(--p-accent-saturation), var(--p-accent-lightness), 0.24);
@@ -831,54 +1025,75 @@ button[p-color="accent"] {
 }
 
 button[p-color="aux-1"] {
+  --p-local-color-hue: var(--p-aux-1-hue);
+  --p-local-color-saturation: var(--p-aux-1-saturation);
+  --p-local-color-lightness: var(--p-aux-1-lightness);
   --p-local-color: var(--p-aux-1);
-  --p-local-color-darker: hsl(calc(var(--p-aux-1-hue) + 2), calc(var(--p-aux-1-saturation) - 3%), calc(var(--p-aux-1-lightness) - 7%));
-  --p-local-color-darkest: hsl(calc(var(--p-aux-1-hue) + 2), calc(var(--p-aux-1-saturation) - 6%), calc(var(--p-aux-1-lightness) - 14%));
+  --p-local-color-darker: hsl(calc(var(--p-aux-1-hue) + 2), calc(var(--p-aux-1-saturation) - 3%), calc(var(--p-aux-1-lightness) - 6%));
+  --p-local-color-darkest: hsl(calc(var(--p-aux-1-hue) + 4), calc(var(--p-aux-1-saturation) - 6%), calc(var(--p-aux-1-lightness) - 10%));
   --p-local-color-opaque: hsla(var(--p-aux-1-hue), var(--p-aux-1-saturation), var(--p-aux-1-lightness), 0.12);
   --p-local-text: var(--p-aux-1-text);
 }
 
 button[p-color="aux-2"] {
+  --p-local-color-hue: var(--p-aux-2-hue);
+  --p-local-color-saturation: var(--p-aux-2-saturation);
+  --p-local-color-lightness: var(--p-aux-2-lightness);
   --p-local-color: var(--p-aux-2);
-  --p-local-color-darker: hsl(calc(var(--p-aux-2-hue) + 2), calc(var(--p-aux-2-saturation) - 3%), calc(var(--p-aux-2-lightness) - 7%));
-  --p-local-color-darkest: hsl(calc(var(--p-aux-2-hue) + 2), calc(var(--p-aux-2-saturation) - 6%), calc(var(--p-aux-2-lightness) - 14%));
+  --p-local-color-darker: hsl(calc(var(--p-aux-2-hue) + 2), calc(var(--p-aux-2-saturation) - 3%), calc(var(--p-aux-2-lightness) - 6%));
+  --p-local-color-darkest: hsl(calc(var(--p-aux-2-hue) + 4), calc(var(--p-aux-2-saturation) - 6%), calc(var(--p-aux-2-lightness) - 10%));
   --p-local-color-opaque: hsla(var(--p-aux-2-hue), var(--p-aux-2-saturation), var(--p-aux-2-lightness), 0.12);
   --p-local-text: var(--p-aux-2-text);
 }
 
 button[p-color="aux-3"] {
+  --p-local-color-hue: var(--p-aux-3-hue);
+  --p-local-color-saturation: var(--p-aux-3-saturation);
+  --p-local-color-lightness: var(--p-aux-3-lightness);
   --p-local-color: var(--p-aux-3);
-  --p-local-color-darker: hsl(calc(var(--p-aux-3-hue) + 2), calc(var(--p-aux-3-saturation) - 3%), calc(var(--p-aux-3-lightness) - 7%));
-  --p-local-color-darkest: hsl(calc(var(--p-aux-3-hue) + 2), calc(var(--p-aux-3-saturation) - 6%), calc(var(--p-aux-3-lightness) - 14%));
+  --p-local-color-darker: hsl(calc(var(--p-aux-3-hue) + 2), calc(var(--p-aux-3-saturation) - 3%), calc(var(--p-aux-3-lightness) - 6%));
+  --p-local-color-darkest: hsl(calc(var(--p-aux-3-hue) + 2), calc(var(--p-aux-3-saturation) - 6%), calc(var(--p-aux-3-lightness) - 10%));
   --p-local-color-opaque: hsla(var(--p-aux-3-hue), var(--p-aux-3-saturation), var(--p-aux-3-lightness), 0.12);
   --p-local-text: var(--p-aux-3-text);
 }
 
 button[p-color="success"] {
+  --p-local-color-hue: var(--p-success-hue);
+  --p-local-color-saturation: var(--p-success-saturation);
+  --p-local-color-lightness: var(--p-success-lightness);
   --p-local-color: var(--p-success);
-  --p-local-color-darker: hsl(calc(var(--p-success-hue) + 2), calc(var(--p-success-saturation) - 3%), calc(var(--p-success-lightness) - 7%));
-  --p-local-color-darkest: hsl(calc(var(--p-success-hue) + 2), calc(var(--p-success-saturation) - 6%), calc(var(--p-success-lightness) - 14%));
+  --p-local-color-darker: hsl(calc(var(--p-success-hue) + 2), calc(var(--p-success-saturation) - 3%), calc(var(--p-success-lightness) - 6%));
+  --p-local-color-darkest: hsl(calc(var(--p-success-hue) + 2), calc(var(--p-success-saturation) - 6%), calc(var(--p-success-lightness) - 10%));
   --p-local-color-opaque: hsla(var(--p-success-hue), var(--p-success-saturation), var(--p-success-lightness), 0.12);
   --p-local-text: var(--p-success-text);
 }
 button[p-color="danger"] {
+  --p-local-color-hue: var(--p-danger-hue);
+  --p-local-color-saturation: var(--p-danger-saturation);
+  --p-local-color-lightness: var(--p-danger-lightness);
   --p-local-color: var(--p-danger);
-  --p-local-color-darker: hsl(calc(var(--p-danger-hue) + 2), calc(var(--p-danger-saturation) - 3%), calc(var(--p-danger-lightness) - 7%));
-  --p-local-color-darkest: hsl(calc(var(--p-danger-hue) + 2), calc(var(--p-danger-saturation) - 6%), calc(var(--p-danger-lightness) - 14%));
+  --p-local-color-darker: hsl(calc(var(--p-danger-hue) + 2), calc(var(--p-danger-saturation) - 3%), calc(var(--p-danger-lightness) - 6%));
+  --p-local-color-darkest: hsl(calc(var(--p-danger-hue) + 2), calc(var(--p-danger-saturation) - 6%), calc(var(--p-danger-lightness) - 10%));
   --p-local-color-opaque: hsla(var(--p-danger-hue), var(--p-danger-saturation), var(--p-danger-lightness), 0.12);
   --p-local-text: var(--p-danger-text);
 }
 button[p-color="warning"] {
+  --p-local-color-hue: var(--p-warning-hue);
+  --p-local-color-saturation: var(--p-warning-saturation);
+  --p-local-color-lightness: var(--p-warning-lightness);
   --p-local-color: var(--p-warning);
-  --p-local-color-darker: hsl(calc(var(--p-warning-hue) + 2), calc(var(--p-warning-saturation) - 3%), calc(var(--p-warning-lightness) - 7%));
-  --p-local-color-darkest: hsl(calc(var(--p-warning-hue) + 2), calc(var(--p-warning-saturation) - 6%), calc(var(--p-warning-lightness) - 14%));
+  --p-local-color-darker: hsl(calc(var(--p-warning-hue) + 2), calc(var(--p-warning-saturation) - 3%), calc(var(--p-warning-lightness) - 6%));
+  --p-local-color-darkest: hsl(calc(var(--p-warning-hue) + 2), calc(var(--p-warning-saturation) - 6%), calc(var(--p-warning-lightness) - 10%));
   --p-local-color-opaque: hsla(var(--p-warning-hue), var(--p-warning-saturation), var(--p-warning-lightness), 0.12);
   --p-local-text: var(--p-warning-text);
 }
 button[p-color="info"] {
+  --p-local-color-hue: var(--p-info-hue);
+  --p-local-color-saturation: var(--p-info-saturation);
+  --p-local-color-lightness: var(--p-info-lightness);
   --p-local-color: var(--p-info);
-  --p-local-color-darker: hsl(calc(var(--p-info-hue) + 2), calc(var(--p-info-saturation) - 3%), calc(var(--p-info-lightness) - 7%));
-  --p-local-color-darkest: hsl(calc(var(--p-info-hue) + 2), calc(var(--p-info-saturation) - 6%), calc(var(--p-info-lightness) - 14%));
+  --p-local-color-darker: hsl(calc(var(--p-info-hue) + 2), calc(var(--p-info-saturation) - 3%), calc(var(--p-info-lightness) - 6%));
+  --p-local-color-darkest: hsl(calc(var(--p-info-hue) + 2), calc(var(--p-info-saturation) - 6%), calc(var(--p-info-lightness) - 10%));
   --p-local-color-opaque: hsla(var(--p-info-hue), var(--p-info-saturation), var(--p-info-lightness), 0.12);
   --p-local-text: var(--p-info-text);
 }
@@ -903,8 +1118,7 @@ button[p-variant='solid']:focus {
 }
 
 button[p-variant='solid']:active {
-  background-color: hsl(calc(var(--p-local-color-hue) + 4), calc(var(--p-local-color-saturation) - 6%), calc(var(--p-local-color-lightness) - 12%));
-  /* background-color: var(--p-local-color-darkest); */
+  background-color: var(--p-local-color-darkest);
 }
 
 button[p-variant='solid']:disabled {

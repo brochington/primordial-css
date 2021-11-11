@@ -1,41 +1,6 @@
-/* variants: solid outline ghost link neu */
-/* sizes: xs sm md lg xl */
-/* colors: brand accent */
-
 :root {
   --p-button-font-family: var(--p-font-family-1);
   --p-button-border-radius: 4px;
-
-  /* Variants */
-
-  /* solid variant */
-  /* --p-btn-solid-color: var(--p-text-1); */
-
-  /* outline variant */
-  /* --p-btn-fill-outline-color: var(--p-text-1); */
-
-  /* ghost variant */
-  /* --p-button-fill-ghost-color: var(--p-text-1); */
-
-  /* link variant */
-  /* --p-button-fill-link-color: var(--p-text-1); */
-
-  /* neu variant */
-  /* --p-button-fill-neu-color: var(--p-text-1); */
-
-  /* Colors /*
-
-  /* unstyled */
-  /* --p-btn-base-color: var(--p-btn-1);
-  --p-btn-base-text: var(--p-text-invert); */
-
-  /* brand */
-  /* --p-btn-brand-color: var(--p-brand);
-  --p-btn-brand-text: var(--p-brand-text); */
-
-  /* accent */
-  /* --p-btn-accent-color: var(--p-accent);
-  --p-btn-accent-text: var(--p-text-1); */
 }
 
 /* Button Sizing */
@@ -45,6 +10,7 @@ button {
   -moz-appearance: none;
   word-break: keep-all;
   outline: none;
+  outline-offset: 2px;
   border-radius: var(--p-button-border-radius);
   border-style: solid;
   border-color: transparent;
@@ -54,7 +20,6 @@ button {
   justify-content: center;
   font-family: var(--p-button-font-family);
   font-weight: 600;
-  /* Default button size is "md" */
   font-size: 12px;
   line-height: 24px;
   padding: 7px 20px;
@@ -104,8 +69,8 @@ button[p-color="base"] {
   --p-local-color-saturation: var(--p-base-saturation);
   --p-local-color-lightness: var(--p-base-lightness);
   --p-local-color: var(--p-base);
-  --p-local-color-darker: hsl(calc(var(--p-base-hue) + 2), calc(var(--p-base-saturation) - 3%), calc(var(--p-base-lightness) - 7%));
-  --p-local-color-darkest: hsl(calc(var(--p-base-hue) + 4), calc(var(--p-base-saturation) - 6%), calc(var(--p-base-lightness) - 14%));
+  --p-local-color-darker: hsl(calc(var(--p-base-hue) + 2), calc(var(--p-base-saturation) - 3%), calc(var(--p-base-lightness) - 6%));
+  --p-local-color-darkest: hsl(calc(var(--p-base-hue) + 4), calc(var(--p-base-saturation) - 6%), calc(var(--p-base-lightness) - 10%));
   --p-local-color-opaque: hsla(var(--p-base-hue), var(--p-base-saturation), var(--p-base-lightness) 0.12);
   --p-local-color-opaque-1: hsla(var(--p-base-hue), var(--p-base-saturation), var(--p-base-lightness) 0.12);
   --p-local-color-opaque-2: hsla(var(--p-base-hue), var(--p-base-saturation), var(--p-base-lightness) 0.24);
@@ -117,8 +82,8 @@ button[p-color="brand"] {
   --p-local-color-saturation: var(--p-brand-saturation);
   --p-local-color-lightness: var(--p-brand-lightness);
   --p-local-color: var(--p-brand);
-  --p-local-color-darker: hsl(calc(var(--p-brand-hue) + 2), calc(var(--p-brand-saturation) - 3%), calc(var(--p-brand-lightness) - 7%));
-  --p-local-color-darkest: hsl(calc(var(--p-brand-hue) + 2), calc(var(--p-brand-saturation) - 6%), calc(var(--p-brand-lightness) - 14%));
+  --p-local-color-darker: hsl(calc(var(--p-brand-hue) + 2), calc(var(--p-brand-saturation) - 3%), calc(var(--p-brand-lightness) - 6%));
+  --p-local-color-darkest: hsl(calc(var(--p-brand-hue) + 4), calc(var(--p-brand-saturation) - 6%), calc(var(--p-brand-lightness) - 10%));
   --p-local-color-opaque: hsla(var(--p-brand-hue), var(--p-brand-saturation), var(--p-brand-lightness), 0.12);
   --p-local-color-opaque-1: hsla(var(--p-brand-hue), var(--p-brand-saturation), var(--p-brand-lightness), 0.12);
   --p-local-color-opaque-2: hsla(var(--p-brand-hue), var(--p-brand-saturation), var(--p-brand-lightness), 0.24);
@@ -130,8 +95,8 @@ button[p-color="accent"] {
   --p-local-color-saturation: var(--p-accent-saturation);
   --p-local-color-lightness: var(--p-accent-lightness);
   --p-local-color: var(--p-accent);
-  --p-local-color-darker: hsl(calc(var(--p-accent-hue) + 2), calc(var(--p-accent-saturation) - 3%), calc(var(--p-accent-lightness) - 7%));
-  --p-local-color-darkest: hsl(calc(var(--p-accent-hue) + 4), calc(var(--p-accent-saturation) - 6%), calc(var(--p-accent-lightness) - 14%));
+  --p-local-color-darker: hsl(calc(var(--p-accent-hue) + 2), calc(var(--p-accent-saturation) - 3%), calc(var(--p-accent-lightness) - 6%));
+  --p-local-color-darkest: hsl(calc(var(--p-accent-hue) + 4), calc(var(--p-accent-saturation) - 6%), calc(var(--p-accent-lightness) - 10%));
   --p-local-color-opaque: hsla(var(--p-accent-hue), var(--p-accent-saturation), var(--p-accent-lightness), 0.12);
   --p-local-color-opaque-1: hsla(var(--p-accent-hue), var(--p-accent-saturation), var(--p-accent-lightness), 0.12);
   --p-local-color-opaque-2: hsla(var(--p-accent-hue), var(--p-accent-saturation), var(--p-accent-lightness), 0.24);
@@ -139,54 +104,75 @@ button[p-color="accent"] {
 }
 
 button[p-color="aux-1"] {
+  --p-local-color-hue: var(--p-aux-1-hue);
+  --p-local-color-saturation: var(--p-aux-1-saturation);
+  --p-local-color-lightness: var(--p-aux-1-lightness);
   --p-local-color: var(--p-aux-1);
-  --p-local-color-darker: hsl(calc(var(--p-aux-1-hue) + 2), calc(var(--p-aux-1-saturation) - 3%), calc(var(--p-aux-1-lightness) - 7%));
-  --p-local-color-darkest: hsl(calc(var(--p-aux-1-hue) + 2), calc(var(--p-aux-1-saturation) - 6%), calc(var(--p-aux-1-lightness) - 14%));
+  --p-local-color-darker: hsl(calc(var(--p-aux-1-hue) + 2), calc(var(--p-aux-1-saturation) - 3%), calc(var(--p-aux-1-lightness) - 6%));
+  --p-local-color-darkest: hsl(calc(var(--p-aux-1-hue) + 4), calc(var(--p-aux-1-saturation) - 6%), calc(var(--p-aux-1-lightness) - 10%));
   --p-local-color-opaque: hsla(var(--p-aux-1-hue), var(--p-aux-1-saturation), var(--p-aux-1-lightness), 0.12);
   --p-local-text: var(--p-aux-1-text);
 }
 
 button[p-color="aux-2"] {
+  --p-local-color-hue: var(--p-aux-2-hue);
+  --p-local-color-saturation: var(--p-aux-2-saturation);
+  --p-local-color-lightness: var(--p-aux-2-lightness);
   --p-local-color: var(--p-aux-2);
-  --p-local-color-darker: hsl(calc(var(--p-aux-2-hue) + 2), calc(var(--p-aux-2-saturation) - 3%), calc(var(--p-aux-2-lightness) - 7%));
-  --p-local-color-darkest: hsl(calc(var(--p-aux-2-hue) + 2), calc(var(--p-aux-2-saturation) - 6%), calc(var(--p-aux-2-lightness) - 14%));
+  --p-local-color-darker: hsl(calc(var(--p-aux-2-hue) + 2), calc(var(--p-aux-2-saturation) - 3%), calc(var(--p-aux-2-lightness) - 6%));
+  --p-local-color-darkest: hsl(calc(var(--p-aux-2-hue) + 4), calc(var(--p-aux-2-saturation) - 6%), calc(var(--p-aux-2-lightness) - 10%));
   --p-local-color-opaque: hsla(var(--p-aux-2-hue), var(--p-aux-2-saturation), var(--p-aux-2-lightness), 0.12);
   --p-local-text: var(--p-aux-2-text);
 }
 
 button[p-color="aux-3"] {
+  --p-local-color-hue: var(--p-aux-3-hue);
+  --p-local-color-saturation: var(--p-aux-3-saturation);
+  --p-local-color-lightness: var(--p-aux-3-lightness);
   --p-local-color: var(--p-aux-3);
-  --p-local-color-darker: hsl(calc(var(--p-aux-3-hue) + 2), calc(var(--p-aux-3-saturation) - 3%), calc(var(--p-aux-3-lightness) - 7%));
-  --p-local-color-darkest: hsl(calc(var(--p-aux-3-hue) + 2), calc(var(--p-aux-3-saturation) - 6%), calc(var(--p-aux-3-lightness) - 14%));
+  --p-local-color-darker: hsl(calc(var(--p-aux-3-hue) + 2), calc(var(--p-aux-3-saturation) - 3%), calc(var(--p-aux-3-lightness) - 6%));
+  --p-local-color-darkest: hsl(calc(var(--p-aux-3-hue) + 2), calc(var(--p-aux-3-saturation) - 6%), calc(var(--p-aux-3-lightness) - 10%));
   --p-local-color-opaque: hsla(var(--p-aux-3-hue), var(--p-aux-3-saturation), var(--p-aux-3-lightness), 0.12);
   --p-local-text: var(--p-aux-3-text);
 }
 
 button[p-color="success"] {
+  --p-local-color-hue: var(--p-success-hue);
+  --p-local-color-saturation: var(--p-success-saturation);
+  --p-local-color-lightness: var(--p-success-lightness);
   --p-local-color: var(--p-success);
-  --p-local-color-darker: hsl(calc(var(--p-success-hue) + 2), calc(var(--p-success-saturation) - 3%), calc(var(--p-success-lightness) - 7%));
-  --p-local-color-darkest: hsl(calc(var(--p-success-hue) + 2), calc(var(--p-success-saturation) - 6%), calc(var(--p-success-lightness) - 14%));
+  --p-local-color-darker: hsl(calc(var(--p-success-hue) + 2), calc(var(--p-success-saturation) - 3%), calc(var(--p-success-lightness) - 6%));
+  --p-local-color-darkest: hsl(calc(var(--p-success-hue) + 2), calc(var(--p-success-saturation) - 6%), calc(var(--p-success-lightness) - 10%));
   --p-local-color-opaque: hsla(var(--p-success-hue), var(--p-success-saturation), var(--p-success-lightness), 0.12);
   --p-local-text: var(--p-success-text);
 }
 button[p-color="danger"] {
+  --p-local-color-hue: var(--p-danger-hue);
+  --p-local-color-saturation: var(--p-danger-saturation);
+  --p-local-color-lightness: var(--p-danger-lightness);
   --p-local-color: var(--p-danger);
-  --p-local-color-darker: hsl(calc(var(--p-danger-hue) + 2), calc(var(--p-danger-saturation) - 3%), calc(var(--p-danger-lightness) - 7%));
-  --p-local-color-darkest: hsl(calc(var(--p-danger-hue) + 2), calc(var(--p-danger-saturation) - 6%), calc(var(--p-danger-lightness) - 14%));
+  --p-local-color-darker: hsl(calc(var(--p-danger-hue) + 2), calc(var(--p-danger-saturation) - 3%), calc(var(--p-danger-lightness) - 6%));
+  --p-local-color-darkest: hsl(calc(var(--p-danger-hue) + 2), calc(var(--p-danger-saturation) - 6%), calc(var(--p-danger-lightness) - 10%));
   --p-local-color-opaque: hsla(var(--p-danger-hue), var(--p-danger-saturation), var(--p-danger-lightness), 0.12);
   --p-local-text: var(--p-danger-text);
 }
 button[p-color="warning"] {
+  --p-local-color-hue: var(--p-warning-hue);
+  --p-local-color-saturation: var(--p-warning-saturation);
+  --p-local-color-lightness: var(--p-warning-lightness);
   --p-local-color: var(--p-warning);
-  --p-local-color-darker: hsl(calc(var(--p-warning-hue) + 2), calc(var(--p-warning-saturation) - 3%), calc(var(--p-warning-lightness) - 7%));
-  --p-local-color-darkest: hsl(calc(var(--p-warning-hue) + 2), calc(var(--p-warning-saturation) - 6%), calc(var(--p-warning-lightness) - 14%));
+  --p-local-color-darker: hsl(calc(var(--p-warning-hue) + 2), calc(var(--p-warning-saturation) - 3%), calc(var(--p-warning-lightness) - 6%));
+  --p-local-color-darkest: hsl(calc(var(--p-warning-hue) + 2), calc(var(--p-warning-saturation) - 6%), calc(var(--p-warning-lightness) - 10%));
   --p-local-color-opaque: hsla(var(--p-warning-hue), var(--p-warning-saturation), var(--p-warning-lightness), 0.12);
   --p-local-text: var(--p-warning-text);
 }
 button[p-color="info"] {
+  --p-local-color-hue: var(--p-info-hue);
+  --p-local-color-saturation: var(--p-info-saturation);
+  --p-local-color-lightness: var(--p-info-lightness);
   --p-local-color: var(--p-info);
-  --p-local-color-darker: hsl(calc(var(--p-info-hue) + 2), calc(var(--p-info-saturation) - 3%), calc(var(--p-info-lightness) - 7%));
-  --p-local-color-darkest: hsl(calc(var(--p-info-hue) + 2), calc(var(--p-info-saturation) - 6%), calc(var(--p-info-lightness) - 14%));
+  --p-local-color-darker: hsl(calc(var(--p-info-hue) + 2), calc(var(--p-info-saturation) - 3%), calc(var(--p-info-lightness) - 6%));
+  --p-local-color-darkest: hsl(calc(var(--p-info-hue) + 2), calc(var(--p-info-saturation) - 6%), calc(var(--p-info-lightness) - 10%));
   --p-local-color-opaque: hsla(var(--p-info-hue), var(--p-info-saturation), var(--p-info-lightness), 0.12);
   --p-local-text: var(--p-info-text);
 }
@@ -211,8 +197,7 @@ button[p-variant='solid']:focus {
 }
 
 button[p-variant='solid']:active {
-  background-color: hsl(calc(var(--p-local-color-hue) + 4), calc(var(--p-local-color-saturation) - 6%), calc(var(--p-local-color-lightness) - 12%));
-  /* background-color: var(--p-local-color-darkest); */
+  background-color: var(--p-local-color-darkest);
 }
 
 button[p-variant='solid']:disabled {

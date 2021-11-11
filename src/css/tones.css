@@ -1,0 +1,191 @@
+/* https://github.com/argyleink/gui-challenges/blob/main/color-schemes/style.css */
+/* Colorizer: http://colorizer.org/ */
+/* https://css-tricks.com/switch-font-color-for-different-backgrounds-with-css/ */
+/* https://github.com/onury/invert-color */
+/* https://una.im/calculating-color/#/40 */
+
+/*
+# Color Theory: https://www.youtube.com/watch?v=GyVMoejbGFg
+
+## Jewel Tones
+HSB: 
+- S 83-73
+- B 76-56
+HSL: 
+- S 71-57
+- L 44-35
+
+## Pastel Tones
+HSB: 
+- S 14-21
+- B 89-96
+HSL:
+- S 36-72
+- L 82-86
+
+## Earth Tones
+HSB: 
+- S 36-41
+- B 77-36
+HSL:
+- S 37-26
+- L 64-29
+
+## Neutral Tones
+HSB: 
+- S 1-10
+- B 99-70
+HSL:
+- S 33-10
+- L 98-67
+
+## Fluorescent Tones
+HSB: 
+- S 100-63
+- B 100-82
+HSL
+- S 100-59
+- L 50-56
+
+## Shades
+HSB: 
+- S 0-0
+- B 0-100
+HSL: 
+- S 0-0
+- L 0-100
+
+
+Neutral + Shades + a tone
+*/
+
+:root {
+  /* Tones */
+  --p-hue-leap: 37;
+
+  --p-hue-1: var(--p-brand-hue);
+  --p-hue-2: calc(var(--p-brand-hue) + calc(var(--p-hue-leap) * 1));
+  --p-hue-3: calc(var(--p-brand-hue) + calc(var(--p-hue-leap) * 2));
+  --p-hue-4: calc(var(--p-brand-hue) + calc(var(--p-hue-leap) * 3));
+  --p-hue-5: calc(var(--p-brand-hue) + calc(var(--p-hue-leap) * 4));
+  --p-hue-6: calc(var(--p-brand-hue) + calc(var(--p-hue-leap) * 5));
+  --p-hue-7: calc(var(--p-brand-hue) + calc(var(--p-hue-leap) * 6));
+  --p-hue-8: calc(var(--p-brand-hue) + calc(var(--p-hue-leap) * 7));
+  --p-hue-9: calc(var(--p-brand-hue) + calc(var(--p-hue-leap) * 8));
+
+  /* Jewel */
+  --p-jewel-saturation: 65%;
+  --p-jewel-lightness: 40%;
+  --p-jewel-switch: calc((var(--p-jewel-lightness) - var(--contrastThreshold)) * -100);
+  --p-jewel-1: hsl(var(--p-hue-1) var(--p-jewel-saturation) var(--p-jewel-lightness));
+  --p-jewel-2: hsl(var(--p-hue-2) var(--p-jewel-saturation) var(--p-jewel-lightness));
+  --p-jewel-3: hsl(var(--p-hue-3) var(--p-jewel-saturation) var(--p-jewel-lightness));
+  --p-jewel-4: hsl(var(--p-hue-4) var(--p-jewel-saturation) var(--p-jewel-lightness));
+  --p-jewel-5: hsl(var(--p-hue-5) var(--p-jewel-saturation) var(--p-jewel-lightness));
+  --p-jewel-6: hsl(var(--p-hue-6) var(--p-jewel-saturation) var(--p-jewel-lightness));
+  --p-jewel-7: hsl(var(--p-hue-7) var(--p-jewel-saturation) var(--p-jewel-lightness));
+  --p-jewel-8: hsl(var(--p-hue-8) var(--p-jewel-saturation) var(--p-jewel-lightness));
+  --p-jewel-9: hsl(var(--p-hue-9) var(--p-jewel-saturation) var(--p-jewel-lightness));
+  --p-jewel-1-text: hsl(0, 0%, var(--p-jewel-switch));
+  --p-jewel-2-text: hsl(0, 0%, var(--p-jewel-switch));
+  --p-jewel-3-text: hsl(0, 0%, var(--p-jewel-switch));
+  --p-jewel-4-text: hsl(0, 0%, var(--p-jewel-switch));
+  --p-jewel-5-text: hsl(0, 0%, var(--p-jewel-switch));
+  --p-jewel-6-text: hsl(0, 0%, var(--p-jewel-switch));
+  --p-jewel-7-text: hsl(0, 0%, var(--p-jewel-switch));
+  --p-jewel-8-text: hsl(0, 0%, var(--p-jewel-switch));
+  --p-jewel-9-text: hsl(0, 0%, var(--p-jewel-switch));
+
+  /* Pastel */
+  --p-pastel-saturation: 40%;
+  --p-pastel-lightness: 84%;
+  --p-pastel-switch: calc((var(--p-pastel-lightness) - var(--contrastThreshold)) * -100);
+  --p-pastel-1: hsl(var(--p-hue-1) var(--p-pastel-saturation) var(--p-pastel-lightness));
+  --p-pastel-2: hsl(var(--p-hue-2) var(--p-pastel-saturation) var(--p-pastel-lightness));
+  --p-pastel-3: hsl(var(--p-hue-3) var(--p-pastel-saturation) var(--p-pastel-lightness));
+  --p-pastel-4: hsl(var(--p-hue-4) var(--p-pastel-saturation) var(--p-pastel-lightness));
+  --p-pastel-5: hsl(var(--p-hue-5) var(--p-pastel-saturation) var(--p-pastel-lightness));
+  --p-pastel-6: hsl(var(--p-hue-6) var(--p-pastel-saturation) var(--p-pastel-lightness));
+  --p-pastel-7: hsl(var(--p-hue-7) var(--p-pastel-saturation) var(--p-pastel-lightness));
+  --p-pastel-8: hsl(var(--p-hue-8) var(--p-pastel-saturation) var(--p-pastel-lightness));
+  --p-pastel-9: hsl(var(--p-hue-9) var(--p-pastel-saturation) var(--p-pastel-lightness));
+  --p-pastel-1-text: hsl(0, 0%, var(--p-pastel-switch));
+  --p-pastel-2-text: hsl(0, 0%, var(--p-pastel-switch));
+  --p-pastel-3-text: hsl(0, 0%, var(--p-pastel-switch));
+  --p-pastel-4-text: hsl(0, 0%, var(--p-pastel-switch));
+  --p-pastel-5-text: hsl(0, 0%, var(--p-pastel-switch));
+  --p-pastel-6-text: hsl(0, 0%, var(--p-pastel-switch));
+  --p-pastel-7-text: hsl(0, 0%, var(--p-pastel-switch));
+  --p-pastel-8-text: hsl(0, 0%, var(--p-pastel-switch));
+  --p-pastel-9-text: hsl(0, 0%, var(--p-pastel-switch));
+
+  /* Earth */
+  --p-earth-saturation: 30%;
+  --p-earth-lightness: 45%;
+  --p-earth-switch: calc((var(--p-earth-lightness) - var(--contrastThreshold)) * -100);
+  --p-earth-1: hsl(var(--p-hue-1) var(--p-earth-saturation) var(--p-earth-lightness));
+  --p-earth-2: hsl(var(--p-hue-2) var(--p-earth-saturation) var(--p-earth-lightness));
+  --p-earth-3: hsl(var(--p-hue-3) var(--p-earth-saturation) var(--p-earth-lightness));
+  --p-earth-4: hsl(var(--p-hue-4) var(--p-earth-saturation) var(--p-earth-lightness));
+  --p-earth-5: hsl(var(--p-hue-5) var(--p-earth-saturation) var(--p-earth-lightness));
+  --p-earth-6: hsl(var(--p-hue-6) var(--p-earth-saturation) var(--p-earth-lightness));
+  --p-earth-7: hsl(var(--p-hue-7) var(--p-earth-saturation) var(--p-earth-lightness));
+  --p-earth-8: hsl(var(--p-hue-8) var(--p-earth-saturation) var(--p-earth-lightness));
+  --p-earth-9: hsl(var(--p-hue-9) var(--p-earth-saturation) var(--p-earth-lightness));
+  --p-earth-1-text: hsl(0, 0%, var(--p-earth-switch));
+  --p-earth-2-text: hsl(0, 0%, var(--p-earth-switch));
+  --p-earth-3-text: hsl(0, 0%, var(--p-earth-switch));
+  --p-earth-4-text: hsl(0, 0%, var(--p-earth-switch));
+  --p-earth-5-text: hsl(0, 0%, var(--p-earth-switch));
+  --p-earth-6-text: hsl(0, 0%, var(--p-earth-switch));
+  --p-earth-7-text: hsl(0, 0%, var(--p-earth-switch));
+  --p-earth-8-text: hsl(0, 0%, var(--p-earth-switch));
+  --p-earth-9-text: hsl(0, 0%, var(--p-earth-switch));
+
+  /* Neutral */
+  --p-neutral-saturation: 20%;
+  --p-neutral-lightness: 80%;
+  --p-neutral-switch: calc((var(--p-neutral-lightness) - var(--contrastThreshold)) * -100);
+  --p-neutral-1: hsl(var(--p-hue-1) var(--p-neutral-saturation) var(--p-neutral-lightness));
+  --p-neutral-2: hsl(var(--p-hue-2) var(--p-neutral-saturation) var(--p-neutral-lightness));
+  --p-neutral-3: hsl(var(--p-hue-3) var(--p-neutral-saturation) var(--p-neutral-lightness));
+  --p-neutral-4: hsl(var(--p-hue-4) var(--p-neutral-saturation) var(--p-neutral-lightness));
+  --p-neutral-5: hsl(var(--p-hue-5) var(--p-neutral-saturation) var(--p-neutral-lightness));
+  --p-neutral-6: hsl(var(--p-hue-6) var(--p-neutral-saturation) var(--p-neutral-lightness));
+  --p-neutral-7: hsl(var(--p-hue-7) var(--p-neutral-saturation) var(--p-neutral-lightness));
+  --p-neutral-8: hsl(var(--p-hue-8) var(--p-neutral-saturation) var(--p-neutral-lightness));
+  --p-neutral-9: hsl(var(--p-hue-9) var(--p-neutral-saturation) var(--p-neutral-lightness));
+  --p-neutral-1-text: hsl(0, 0%, var(--p-neutral-switch));
+  --p-neutral-2-text: hsl(0, 0%, var(--p-neutral-switch));
+  --p-neutral-3-text: hsl(0, 0%, var(--p-neutral-switch));
+  --p-neutral-4-text: hsl(0, 0%, var(--p-neutral-switch));
+  --p-neutral-5-text: hsl(0, 0%, var(--p-neutral-switch));
+  --p-neutral-6-text: hsl(0, 0%, var(--p-neutral-switch));
+  --p-neutral-7-text: hsl(0, 0%, var(--p-neutral-switch));
+  --p-neutral-8-text: hsl(0, 0%, var(--p-neutral-switch));
+  --p-neutral-9-text: hsl(0, 0%, var(--p-neutral-switch));
+
+  /* Neutral */
+  --p-neon-saturation: 90%;
+  --p-neon-lightness: 50%;
+  --p-neon-switch: calc((var(--p-neon-lightness) - var(--contrastThreshold)) * -100);
+  --p-neon-1: hsl(var(--p-hue-1) var(--p-neon-saturation) var(--p-neon-lightness));
+  --p-neon-2: hsl(var(--p-hue-2) var(--p-neon-saturation) var(--p-neon-lightness));
+  --p-neon-3: hsl(var(--p-hue-3) var(--p-neon-saturation) var(--p-neon-lightness));
+  --p-neon-4: hsl(var(--p-hue-4) var(--p-neon-saturation) var(--p-neon-lightness));
+  --p-neon-5: hsl(var(--p-hue-5) var(--p-neon-saturation) var(--p-neon-lightness));
+  --p-neon-6: hsl(var(--p-hue-6) var(--p-neon-saturation) var(--p-neon-lightness));
+  --p-neon-7: hsl(var(--p-hue-7) var(--p-neon-saturation) var(--p-neon-lightness));
+  --p-neon-8: hsl(var(--p-hue-8) var(--p-neon-saturation) var(--p-neon-lightness));
+  --p-neon-9: hsl(var(--p-hue-9) var(--p-neon-saturation) var(--p-neon-lightness));
+  --p-neon-1-text: hsl(0, 0%, var(--p-neon-switch));
+  --p-neon-2-text: hsl(0, 0%, var(--p-neon-switch));
+  --p-neon-3-text: hsl(0, 0%, var(--p-neon-switch));
+  --p-neon-4-text: hsl(0, 0%, var(--p-neon-switch));
+  --p-neon-5-text: hsl(0, 0%, var(--p-neon-switch));
+  --p-neon-6-text: hsl(0, 0%, var(--p-neon-switch));
+  --p-neon-7-text: hsl(0, 0%, var(--p-neon-switch));
+  --p-neon-8-text: hsl(0, 0%, var(--p-neon-switch));
+  --p-neon-9-text: hsl(0, 0%, var(--p-neon-switch));
+
+}

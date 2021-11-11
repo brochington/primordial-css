@@ -90,14 +90,14 @@ function setShades(colorName: string, count = 10) {
 }
 
 window.addEventListener('DOMContentLoaded', () => {
-  setShades('base');
-  updateBrandContrast();
+  // setShades('base');
+  // updateBrandContrast();
 
   let obs = new MutationObserver((mutations, obs) => {
     obs.disconnect();
     console.time('updateBrandContrast');
-    updateBrandContrast();
-    setShades('base');
+    // updateBrandContrast();
+    // setShades('base');
     console.timeEnd('updateBrandContrast');
 
     obs.observe(document.documentElement, obsConfig);
