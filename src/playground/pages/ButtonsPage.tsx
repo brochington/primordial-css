@@ -2,12 +2,12 @@ import React, { FC } from 'react';
 
 type ButtonVariants = 'solid' | 'outline' | 'ghost' | 'link' | 'neu';
 
-type ButtonRowProps = {
+type ButtonSizeRowProps = {
   variant: ButtonVariants;
   color: string;
 };
 
-const ButtonRow: FC<ButtonRowProps> = (props: ButtonRowProps) => {
+const ButtonSizeRow: FC<ButtonSizeRowProps> = (props: ButtonSizeRowProps) => {
   const { variant, color } = props;
 
   return (
@@ -17,9 +17,10 @@ const ButtonRow: FC<ButtonRowProps> = (props: ButtonRowProps) => {
         gridTemplateColumns: 'repeat(auto-fit, 8rem)',
         gridAutoRows: '4rem',
         gap: '1rem',
-        alignItems: 'end'
+        alignItems: 'end',
       }}
     >
+      <div>{variant}</div>
       <div>
         <button p-variant={variant} p-size="xs" p-color={color}>
           Button
@@ -49,34 +50,67 @@ const ButtonRow: FC<ButtonRowProps> = (props: ButtonRowProps) => {
   );
 };
 
-type ButtonColorGridProps = {
-  
+type ButtonVariantRowProps = {
+  color: string;
 };
 
-const colorNames = ['base', 'brand', 'accent', 'aux-1', 'aux-2','aux-3', 'success', 'warning', 'danger', 'info'];
-
-const ButtonColorGrid: FC<ButtonColorGridProps> = (props: ButtonColorGridProps) => {
-  const {  } = props;
+const ButtonVariantRow: FC<ButtonVariantRowProps> = (props: ButtonVariantRowProps) => {
+  const { color } = props;
 
   return (
     <div
-    style={{
-      width: '100%',
-      display: 'grid',
-      gridTemplateColumns: 'repeat(auto-fit, 8rem)',
-      gridAutoRows: '8rem',
-      gap: '1rem',
-    }}
+      style={{
+        display: 'grid',
+        gridTemplateColumns: 'repeat(auto-fit, 8rem)',
+        gridAutoRows: '4rem',
+        gap: '1rem',
+        alignItems: 'end',
+      }}
     >
-        {colorNames.map((colorName) => (
-          <div>
-            <button p-variant="solid" p-color={colorName} className="capitalize">{colorName}</button>
-          </div>
-        ))}
+      <div>{color}</div>
+      <div>
+        <button p-variant="solid" p-size="md" p-color={color}>
+          Button
+        </button>
+      </div>
+      <div>
+        <button p-variant="outline" p-size="md" p-color={color}>
+          Button
+        </button>
+      </div>
+      <div>
+        <button p-variant="link" p-size="md" p-color={color}>
+          Button
+        </button>
+      </div>
+      <div>
+        <button p-variant="ghost" p-size="md" p-color={color}>
+          Button
+        </button>
+      </div>
+      {/* <div>
+        <button p-variant={variant} p-size="md" p-color={color}>
+          Button
+        </button>
+      </div> */}
     </div>
   );
 };
 
+type ButtonColorGridProps = {};
+
+const colorNames = [
+  'base',
+  'brand',
+  'accent',
+  'aux-1',
+  'aux-2',
+  'aux-3',
+  'success',
+  'warning',
+  'danger',
+  'info',
+];
 
 type Props = {};
 
@@ -89,26 +123,24 @@ const ButtonsPage: FC<Props> = (props: Props) => {
 
       <div>
         <h2>Variants</h2>
-
-        <h3>Solid</h3>
-        <ButtonRow variant="solid" color="brand" />
-
-        <h3>Outline</h3>
-        <ButtonRow variant="outline" color="brand" />
-
-        <h3>Ghost</h3>
-        <ButtonRow variant="ghost" color="brand" />
-
-        <h3>Link</h3>
-        <ButtonRow variant="link" color="brand" />
-
-        <h3>Neu</h3>
-        <ButtonRow variant="neu" color="brand" />
+        <ButtonSizeRow variant="solid" color="brand" />
+        <ButtonSizeRow variant="outline" color="brand" />
+        <ButtonSizeRow variant="ghost" color="brand" />
+        <ButtonSizeRow variant="link" color="brand" />
+        <ButtonSizeRow variant="neu" color="brand" />
       </div>
 
       <div>
         <h2>Colors</h2>
-        <ButtonColorGrid />
+        <ButtonVariantRow color="brand" />
+        <ButtonVariantRow color="accent" />
+        <ButtonVariantRow color="aux-1" />
+        <ButtonVariantRow color="aux-2" />
+        <ButtonVariantRow color="aux-3" />
+        <ButtonVariantRow color="success" />
+        <ButtonVariantRow color="danger" />
+        <ButtonVariantRow color="warning" />
+        <ButtonVariantRow color="info" />
       </div>
     </div>
   );

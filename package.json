@@ -1,6 +1,6 @@
 {
   "name": "primordial-css",
-  "version": "0.0.2",
+  "version": "0.0.6",
   "description": "HTML element only css",
   "main": "dist/primordial.js",
   "style": "dist/primordial.css",

@@ -27,6 +27,7 @@ const Sidebar: FC<Props> = (props: Props) => {
         <SidebarLink to="/headings">Headings</SidebarLink>
         <SidebarLink to="/buttons">Buttons</SidebarLink>
         <SidebarLink to="/colors">Colors</SidebarLink>
+        <SidebarLink to="/inputs">Inputs</SidebarLink>
       </div>
     </div>
   );

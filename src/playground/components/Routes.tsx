@@ -7,6 +7,7 @@ import HomePage from 'pages/HomePage';
 import HeadingsPage from 'pages/HeadingsPage';
 import ButtonsPage from 'pages/ButtonsPage';
 import ColorsPage from 'pages/ColorsPage';
+import InputsPage from 'pages/InputsPage';
 
 type Props = {};
 
@@ -29,9 +30,10 @@ const Routes: FC<Props> = (props: Props) => {
         <div className="os vh100 pb8">
         <Switch>
           <Route exact path="/" component={HomePage} />
+          <Route exact path="/colors" component={ColorsPage} />
           <Route exact path="/headings" component={HeadingsPage} />
           <Route exact path="/buttons" component={ButtonsPage} />
-          <Route exact path="/colors" component={ColorsPage} />
+          <Route exact path="/inputs" component={InputsPage} />
         </Switch>
         </div>
       </div>

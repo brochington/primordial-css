@@ -20,12 +20,13 @@
   --p-base-text: hsl(0, 0%, var(--p-base-switch));
   
   /* Brand */
-  --p-brand-hue: 177;
-  --p-brand-saturation: 60%;
-  --p-brand-lightness: 50%;
+  --p-brand-hue: 186.14;
+  --p-brand-saturation: 54%;
+  --p-brand-lightness: 32%;
   --p-brand: hsl(var(--p-brand-hue) var(--p-brand-saturation) var(--p-brand-lightness));
   --p-brand-switch: calc((var(--p-brand-lightness) - var(--contrastThreshold)) * -100);
-  --p-brand-text: hsl(0, 0%, var(--p-brand-switch));
+  /* --p-brand-text: hsl(0, 0%, var(--p-brand-switch)); */
+  --p-brand-text: hsl(0, 0%, calc((var(--p-brand-lightness) - var(--contrastThreshold)) * -100));
 
   /* Accent */
   --p-accent-hue: calc(var(--p-brand-hue) + 100);
@@ -83,7 +84,7 @@
   --p-info-switch: calc((var(--p-info-lightness) - var(--contrastThreshold)) * -100);
   --p-info-text: hsl(0, 0%, var(--p-info-switch));
 
-  --p-warning-hue: 40;
+  --p-warning-hue: 54;
   /* --p-warning-hue: 31; */
   --p-warning-saturation: 70%;
   --p-warning-lightness: 40%;

@@ -5,7 +5,7 @@
 
 /* Button Sizing */
 
-button {
+button[p-variant] {
   -webkit-appearance: none;
   -moz-appearance: none;
   word-break: keep-all;
@@ -111,6 +111,8 @@ button[p-color="aux-1"] {
   --p-local-color-darker: hsl(calc(var(--p-aux-1-hue) + 2), calc(var(--p-aux-1-saturation) - 3%), calc(var(--p-aux-1-lightness) - 6%));
   --p-local-color-darkest: hsl(calc(var(--p-aux-1-hue) + 4), calc(var(--p-aux-1-saturation) - 6%), calc(var(--p-aux-1-lightness) - 10%));
   --p-local-color-opaque: hsla(var(--p-aux-1-hue), var(--p-aux-1-saturation), var(--p-aux-1-lightness), 0.12);
+  --p-local-color-opaque-1: hsla(var(--p-aux-1-hue), var(--p-aux-1-saturation), var(--p-aux-1-lightness), 0.12);
+  --p-local-color-opaque-2: hsla(var(--p-aux-1-hue), var(--p-aux-1-saturation), var(--p-aux-1-lightness), 0.24);
   --p-local-text: var(--p-aux-1-text);
 }
 
@@ -122,6 +124,8 @@ button[p-color="aux-2"] {
   --p-local-color-darker: hsl(calc(var(--p-aux-2-hue) + 2), calc(var(--p-aux-2-saturation) - 3%), calc(var(--p-aux-2-lightness) - 6%));
   --p-local-color-darkest: hsl(calc(var(--p-aux-2-hue) + 4), calc(var(--p-aux-2-saturation) - 6%), calc(var(--p-aux-2-lightness) - 10%));
   --p-local-color-opaque: hsla(var(--p-aux-2-hue), var(--p-aux-2-saturation), var(--p-aux-2-lightness), 0.12);
+  --p-local-color-opaque-1: hsla(var(--p-aux-2-hue), var(--p-aux-2-saturation), var(--p-aux-2-lightness), 0.12);
+  --p-local-color-opaque-2: hsla(var(--p-aux-2-hue), var(--p-aux-2-saturation), var(--p-aux-2-lightness), 0.24);
   --p-local-text: var(--p-aux-2-text);
 }
 
@@ -133,6 +137,8 @@ button[p-color="aux-3"] {
   --p-local-color-darker: hsl(calc(var(--p-aux-3-hue) + 2), calc(var(--p-aux-3-saturation) - 3%), calc(var(--p-aux-3-lightness) - 6%));
   --p-local-color-darkest: hsl(calc(var(--p-aux-3-hue) + 2), calc(var(--p-aux-3-saturation) - 6%), calc(var(--p-aux-3-lightness) - 10%));
   --p-local-color-opaque: hsla(var(--p-aux-3-hue), var(--p-aux-3-saturation), var(--p-aux-3-lightness), 0.12);
+  --p-local-color-opaque-1: hsla(var(--p-aux-3-hue), var(--p-aux-3-saturation), var(--p-aux-3-lightness), 0.12);
+  --p-local-color-opaque-2: hsla(var(--p-aux-3-hue), var(--p-aux-3-saturation), var(--p-aux-3-lightness), 0.24);
   --p-local-text: var(--p-aux-3-text);
 }
 
@@ -144,6 +150,8 @@ button[p-color="success"] {
   --p-local-color-darker: hsl(calc(var(--p-success-hue) + 2), calc(var(--p-success-saturation) - 3%), calc(var(--p-success-lightness) - 6%));
   --p-local-color-darkest: hsl(calc(var(--p-success-hue) + 2), calc(var(--p-success-saturation) - 6%), calc(var(--p-success-lightness) - 10%));
   --p-local-color-opaque: hsla(var(--p-success-hue), var(--p-success-saturation), var(--p-success-lightness), 0.12);
+  --p-local-color-opaque-1: hsla(var(--p-success-hue), var(--p-success-saturation), var(--p-success-lightness), 0.12);
+  --p-local-color-opaque-2: hsla(var(--p-success-hue), var(--p-success-saturation), var(--p-success-lightness), 0.24);
   --p-local-text: var(--p-success-text);
 }
 button[p-color="danger"] {
@@ -154,6 +162,8 @@ button[p-color="danger"] {
   --p-local-color-darker: hsl(calc(var(--p-danger-hue) + 2), calc(var(--p-danger-saturation) - 3%), calc(var(--p-danger-lightness) - 6%));
   --p-local-color-darkest: hsl(calc(var(--p-danger-hue) + 2), calc(var(--p-danger-saturation) - 6%), calc(var(--p-danger-lightness) - 10%));
   --p-local-color-opaque: hsla(var(--p-danger-hue), var(--p-danger-saturation), var(--p-danger-lightness), 0.12);
+  --p-local-color-opaque-1: hsla(var(--p-danger-hue), var(--p-danger-saturation), var(--p-danger-lightness), 0.12);
+  --p-local-color-opaque-2: hsla(var(--p-danger-hue), var(--p-danger-saturation), var(--p-danger-lightness), 0.24);
   --p-local-text: var(--p-danger-text);
 }
 button[p-color="warning"] {
@@ -164,6 +174,8 @@ button[p-color="warning"] {
   --p-local-color-darker: hsl(calc(var(--p-warning-hue) + 2), calc(var(--p-warning-saturation) - 3%), calc(var(--p-warning-lightness) - 6%));
   --p-local-color-darkest: hsl(calc(var(--p-warning-hue) + 2), calc(var(--p-warning-saturation) - 6%), calc(var(--p-warning-lightness) - 10%));
   --p-local-color-opaque: hsla(var(--p-warning-hue), var(--p-warning-saturation), var(--p-warning-lightness), 0.12);
+  --p-local-color-opaque-1: hsla(var(--p-warning-hue), var(--p-warning-saturation), var(--p-warning-lightness), 0.12);
+  --p-local-color-opaque-2: hsla(var(--p-warning-hue), var(--p-warning-saturation), var(--p-warning-lightness), 0.24);
   --p-local-text: var(--p-warning-text);
 }
 button[p-color="info"] {
@@ -174,6 +186,8 @@ button[p-color="info"] {
   --p-local-color-darker: hsl(calc(var(--p-info-hue) + 2), calc(var(--p-info-saturation) - 3%), calc(var(--p-info-lightness) - 6%));
   --p-local-color-darkest: hsl(calc(var(--p-info-hue) + 2), calc(var(--p-info-saturation) - 6%), calc(var(--p-info-lightness) - 10%));
   --p-local-color-opaque: hsla(var(--p-info-hue), var(--p-info-saturation), var(--p-info-lightness), 0.12);
+  --p-local-color-opaque-1: hsla(var(--p-info-hue), var(--p-info-saturation), var(--p-info-lightness), 0.12);
+  --p-local-color-opaque-2: hsla(var(--p-info-hue), var(--p-info-saturation), var(--p-info-lightness), 0.24);
   --p-local-text: var(--p-info-text);
 }
 
@@ -237,10 +251,8 @@ button[p-variant='outline']:disabled {
 
 
 button[p-variant="ghost"] {
-  /* border-style: solid; */
-  /* border-width: 1px; */
   color: var(--p-local-color);
-  /* border-color: var(--p-local-color); */
+  border: none;
 }
 
 button[p-variant='ghost']:hover {
@@ -269,10 +281,8 @@ button[p-variant='ghost']:disabled {
 /* Link */
 
 button[p-variant="link"] {
-  /* border-style: solid; */
-  /* border-width: 1px; */
   color: var(--p-local-color);
-  /* border-color: var(--p-local-color); */
+  border: none;
 }
 
 button[p-variant='link']:hover {
